@@ -5,3 +5,11 @@
 
 -- Example --
 <img src="svg/heart.svg" class="icon" alt="heart">
+
+-- Change Color --
+.icon {
+  width: 28px; height: 28px;
+  -webkit-mask: url('/asset/svg/icon.svg') no-repeat center/contain;
+  mask: url('/asset/svg/icon.svg') no-repeat center/contain;
+  background-color: #F54B3B;
+}

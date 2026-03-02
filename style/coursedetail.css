@@ -1,0 +1,369 @@
+/* Styles moved to top to match HTML order (Header) */
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* Global improvements: typography and base layout */
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Constrain wide sections for better readability */
+:root {
+    --max-content-width: 1200px;
+}
+
+/* Container */
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    box-sizing: border-box;
+    padding: 35px 7.5vw;
+}
+
+.container-left {
+    width: 70%;
+    height: auto;
+    padding: 25px 25px;
+    border: solid 1px red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-left img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.course-description {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+/* Main Title */
+.course-description h2 {
+    color: var(--title-color);
+    font-size: 32px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.course-description h3 {
+    color: var(--title-color);
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border-divider);
+}
+
+.course-description p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.9;
+    margin-bottom: 16px;
+}
+
+.course-description ul,
+.course-description ol {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    text-align: justify;
+}
+
+.course-description li {
+    font-size: 16px;
+    list-style: none;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.course-description strong {
+    color: var(--title-color);
+    font-weight: 400;
+}
+
+.course-description p em {
+    display: block;
+    margin-top: 30px;
+    padding: 15px 20px;
+    background-color: var(--lightPurple-background-color);
+    border-left: 4px solid var(--title-color);
+    border-radius: var(--border-radius);
+    color: var(--text-main);
+    font-style: normal;
+    font-weight: 500;
+}
+
+.container-right {
+    width: 28%;
+    height: auto;
+    padding: 5px 5px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.teacher,
+.curriculum,
+.payment {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    gap: 10px;
+    border: solid 1px red;
+}
+
+.teacher hr,
+.curriculum hr,
+.payment hr {
+    width: 100%;
+    border: solid 1px rgba(0, 0, 0, 0.075);
+}
+
+.teacher-profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.teacher-profile img {
+    height: 80px;
+    width: 80px;
+}
+
+.teacher-name {
+    height: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.teacher-description,
+.curriculum-description {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teacher-description label,
+.curriculum-description label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teacher-description label span {
+    color: var(--price-color);
+    font-family: 'Inter', Arial;
+}
+
+.teacher-description label del {
+    font-family: 'Inter', Arial;
+    color: var(--text-disabled);
+}
+
+.curriculum-description label button {
+    width: 35%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-secondary);
+}
+
+.curriculum-description label button a {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.teacher button,
+.curriculum button,
+#submitCardBtn {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--button-color);
+    border: none;
+    transition: 0.5s ease;
+}
+
+.curriculum button a {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.teacher button:hover,
+.curriculum button:hover,
+#submitCardBtn:hover {
+    background-color: var(--button-hover-color);
+}
+
+.curriculum h3,
+.payment h3 {
+    font-family: 'Inter', Arial;
+    font-weight: 500;
+    font-size: 28px;
+}
+
+#viewAllLesson,
+#registerBtn {
+    margin-top: 30px;
+}
+
+.payment-method {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment-method button {
+    width: 48%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-color);
+    color: white;
+    font-family: 'Inter', Arial;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#acleda {
+    background-color: lightgray;
+    color: var(--button-color);
+}
+
+#acleda:hover {
+    background-color: var(--button-hover-color);
+    color: white;
+}
+
+.payment-method button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.visa-payment,
+.visa-address {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.payment label {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 10px;
+    font-family: 'Inter', Arial;
+}
+
+.visa-payment input {
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Inter', Arial;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#cardNumber {
+    width: 100%;
+}
+
+#expirationDate {
+    width: 67.5%;
+}
+
+#securityCode {
+    width: 29%;
+}
+
+.visa-address {
+    flex-direction: column;
+}
+
+.visa-address input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Inter', Arial;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.select-country {
+    width: 100%;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: gray;
+    font-family: 'Inter', Arial;
+}
+
+.select-country label {
+    display: block;
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.select-country select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+    font-family: 'Inter', Arial;
+}
+
+.select-country option{
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    font-family: 'Inter', Arial;
+}
+
+#submitCardBtn{
+    font-family: 'Inter', Arial;
+    font-size: 14px;
+}

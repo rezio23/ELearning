@@ -1,11 +1,12 @@
 :root {
     /* Color */
+    --header-footer: rgb(44, 44, 74);
     --background-color: #ffffff;
     --title-color: #5F5881;
-    --button-color: #F66962;
+    --button-color: rgb(44, 44, 74);
     --footer-color: #282834;
     --star-color: #F68C1E;
-    --price-color: #f68c1e;
+    --price-color: #059500;
     --view-color: #DF5415;
     --main-background-color: #FEF0EF;
     --sky-background-color: #DCF7FE;
@@ -17,10 +18,38 @@
     --default-font: 'Inter', sans-serif;
     --icon-width: 24px;
     --icon-height: 24px;
-    --title-font-size: 28px;
+    --title-font-size: 36px;
     --subtitle-font-size: 24px;
-    --content-font-size: 18px;
+    --content-font-size: 16px;
     --input-font-size: 16px;
+
+    /* Text Colors */
+    --text-main: #2e2e33;
+    --text-secondary: #4A4A52;
+    --text-muted: #6b6b78;
+    --text-disabled: #b30000;
+    --text-input: #333333;
+
+    /* UI Colors */
+    --button-hover-color: #F54B3B;
+    --button-secondary-bg: #d3d3d3;
+    --pagination-bg: #ebebeb;
+    --border-light: rgba(0, 0, 0, 0.04);
+    --border-divider: #f3f3f7;
+    --shadow-light: rgba(34, 34, 34, 0.06);
+
+    /* Category Colors */
+    --math-bg: #fadee2;
+    --math-accent: #fd5672;
+    --tech-bg: #DCF7FE;
+    --tech-accent: #45C1F1;
+    --health-bg: #E5FAE9;
+    --health-accent: #5FD46C;
+    --business-bg: #FDF3E9;
+    --business-accent: #EE8644;
+
+    --search-bg: #ffeae1;
+    --text-white: #ffffff;
 }
 
 /*  
@@ -60,6 +89,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     background-color: var(--main-background-color);
+    font-size: var(--content-font-size);
 }
 
 a {
@@ -69,38 +99,109 @@ a {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 56px;
+    margin: 0;
 }
 
 h2 {
     font-size: 36px;
+    margin: 0;
 }
 
 h3 {
-    font-size: 26px;
+    font-size: 24px;
+    margin: 0;
 }
+
+p {
+    font-size: var(--content-font-size);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.future {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: linear-gradient(to right, #94BBE9, #EEAECA);
+}
+
+.future p,
+.future a {
+    color: var(--text-secondary);
+    transition: 0.5s ease;
+}
+
+.future a:hover {
+    color: var(--button-hover-color);
+}
+
 
 /* Header */
 header {
     width: 100%;
-    padding: 0 7.5vw;
-    margin: 0 auto;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
+    height: 110px;
+    z-index: 700;
     top: 0;
     left: 0;
     right: 0;
-    background-color: var(--main-background-color);
-    z-index: 1000;
+    position: fixed;
+    box-sizing: border-box;
 }
 
-header h1 {
+.header-contact {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7.5vw;
+    background-color: var(--header-footer);
+    color: white;
+}
+
+.header-contact a {
+    color: white;
+    font-family: 'Inter', Arial;
+    font-weight: 400;
+}
+
+.contact-left {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-right {
+    display: flex;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-ul {
+    width: 100%;
+    height: 80px;
+    padding: 0 7.5vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-background-color);
+}
+
+.logo a {
     font-size: 36px;
     color: var(--title-color);
     font-weight: bold;
+    text-decoration: none;
 }
 
 header ul {
@@ -132,7 +233,7 @@ header .header-search {
     width: 220px;
     height: 36px;
     padding: 0 10px;
-    background-color: rgb(255, 234, 225);
+    background-color: var(--search-bg);
     border-radius: 30px;
 }
 
@@ -151,7 +252,7 @@ header button {
     width: 100px;
     height: 36px;
     background-color: var(--button-color);
-    color: #fff;
+    color: var(--text-white);
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
@@ -160,14 +261,113 @@ header button {
 
 header button a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-white);
 }
 
 header button:hover {
-    background-color: #F54B3B;
+    background-color: var(--button-hover-color);
 }
 
 header button:hover a {
-    color: #fff;
+    color: var(--text-white);
 }
 
+/* Footer */
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-Item {
+    width: 100%;
+    height: auto;
+    padding: 35px 7.5vw;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.footerItem {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+}
+
+.footerItem h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.footerItem h2 {
+    font-size: 1.4rem;
+    font-family: 'Inter', Arial;
+    color: var(--text-muted);
+}
+
+.footerProfile {
+    gap: 20px;
+}
+
+.footerProfile .logo {
+    width: 80px;
+    background-color: var(--button-color);
+    color: white;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.footerProfile a {
+    color: white;
+}
+
+.footerProfile p {
+    font-family: 'Inter';
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.footerSocial {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.footerProfile i {
+    font-size: 1.8rem;
+    color: var(--button-color);
+}
+
+.footerPartner a,
+.footerReference a{
+    font-size: 20px;
+    font-family: 'Inter', Arial;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+.footer-Copyright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: var(--header-footer);
+    color: white;
+    font-family: 'Inter', Arial;
+    font-weight: bold;
+}

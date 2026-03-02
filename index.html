@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,35 +19,67 @@
 <body>
     <!-- Header -->
     <header>
-        <h1>ចក្រា</h1>
-        <ul>
-            <li><a href="#">ដំបូង</a></li>
-            <li><a href="#">ទំព័រ</a></li>
-            <li><a href="#">វគ្គសិក្សា</a></li>
-            <li><a href="#">ប្លុក</a></li>
-            <li><a href="#">ទំនិញ</a></li>
-        </ul>
-        <div class="header-actions">
-            <div class="header-search">
-                <img src="asset/svg/search.svg" class="icon" alt="search">
-                <input type="text" placeholder="ស្វែងរក...">
+        <div class="header-contact">
+            <div class="contact-left">
+                <div class="header-call">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">+855 12 233 344</a>
+                </div>
+                <div class="header-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="#">username@gmail.com</a>
+                </div>
             </div>
-            <button><a href="#">ចូល</a></button>
+            <div class="contact-right">
+                <div class="header-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="#">Location</a>
+                </div>
+                <div class="header-location">
+                    <i class="fa-solid fa-robot"></i>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-ul">
+            <div class="logo">
+                <a href="#">ចក្រា</a>
+            </div>
+            <ul>
+                <li><a href="#">ដំបូង</a></li>
+                <li><a href="#">ទំព័រ</a></li>
+                <li><a href="#">វគ្គសិក្សា</a></li>
+                <li><a href="#">ប្លុក</a></li>
+                <li><a href="#">ទំនិញ</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="header-search">
+                    <img src="asset/svg/search.svg" class="icon" alt="search">
+                    <input type="text" placeholder="ស្វែងរក...">
+                </div>
+                <button><a href="#">ចូល</a></button>
+            </div>
         </div>
     </header>
+
+    
+    <div class="future">
+        <h1>សិក្សាដើម្បីអនាគតដ៏ភ្លឺស្វាងរបស់លោកអ្នក</h1>
+        <p>ទំព័រដើម <i class="fa-solid fa-arrow-right"></i> <a href="src/allcourse.html">មើលវគ្គទាំងអស់</a></p>
+    </div>
 
     <!-- Hero Banner -->
     <section class="hero-baner">
         <div class="hero-title">
-            <h1>បង្កើតក្ដីស្រម៉ៃរបស់អ្នកអោយក្លាយជាការពិត</h1>
-            <h3>ជ្រើសរើសមេរៀនជាច្រើនដោយមិនគិតថ្លៃដើម្បីជាជមនួយដល់ការសិក្សារបស់អ្នក</h3>
+            <h1>បង្កើត<span>ក្ដីស្រម៉ៃ</span>របស់អ្នកអោយក្លាយជាការពិត</h1>
+            <p>ជ្រើសរើសមេរៀនជាច្រើនដោយមិនគិតថ្លៃដើម្បីជាជមនួយដល់ការសិក្សារបស់អ្នក</p>
             <div class="hero-search">
                 <input type="text" placeholder="ស្វែងរកវគ្គសិក្សា...">
                 <img src="asset/svg/search.svg" alt="search">
             </div>
         </div>
         <div class="hero-advertise">
-            <img src="https://w0.peakpx.com/wallpaper/96/806/HD-wallpaper-back-to-school-cute-school-black-board-black-beauty-child-graduation-student.jpg"
+            <img src="https://png.pngtree.com/png-vector/20190120/ourmid/pngtree-graduate-jump-up-jump-up-student-college-students-png-image_489505.png"
                 alt="">
         </div>
     </section>
@@ -54,8 +87,8 @@
     <!-- Course -->
     <div class="course">
         <div class="course-title">
-            <h1>ជ្រើសរើសវគ្គសិក្សារបស់អ្នក</h1>
-            <button><a href="#">មើលទាំងអស់</a></button>
+            <h2>ជ្រើសរើសវគ្គសិក្សារបស់អ្នក</h2>
+            <button><a href="src/allcourse.html" target="_blank">មើលទាំងអស់</a></button>
         </div>
         <div class="course-item">
             <!-- <div class="course-item-card">
@@ -73,20 +106,20 @@
                             alt="author">
                         <p>Vichhean Sombath</p>
                     </div>
-                    <h2 class="price"><del>$19.99</del> Free</h2>
+                    <p class="price"><del>$19.99</del> Free</p>
                 </div>
             </div> -->
         </div>
         <div class="course-part">
-            <div id="course-number" class="course-current">១</div>
-            <div id="course-number" class="coutse-next">២</div>
-            <button><a href="#">បន្ទាប់</a></button>
+            <button id="course-number" class="course-current" onclick="backCourse()">១</button>
+            <button id="course-number" class="course-current" onclick="nextCourse()">២</button>
+            <button id="nextBtn" onclick="nextCourse()">បន្ទាប់</button>
         </div>
     </div>
 
     <div class="category">
         <div class="category-title">
-            <h1>ជ្រើសរើសវគ្គសិក្សារបស់អ្នក</h1>
+            <h2>ជ្រើសរើសវគ្គសិក្សារបស់អ្នក</h2>
             <button><a href="#">មើលទាំងអស់</a></button>
         </div>
         <div class="category-container" id="category-item">
@@ -102,20 +135,102 @@
 
     <div class="platform">
         <div class="platform-title">
-            <h1>ស្វែងយល់អំពីវិធីសាស្ត្រនៃការសិក្សា</h1>
             <h2>ស្វែងយល់អំពីវិធីសាស្ត្រនៃការសិក្សា</h2>
-            <div​​ style="display: flex; flex-direction: column;">
-                <label for="#"><img src="asset/svg/check.svg" alt="">​​​ វីដេអូ និងឯកសារបង្រៀនមិនគិតថ្លៃ</label>
-                <label for="#"><img src="asset/svg/check.svg" alt="">​​​ បង្រៀនដោយគ្រូមានបទពិសោធន៍ច្រើនឆ្នាំ</label>
-                <label for="#"><img src="asset/svg/check.svg" alt="">​​​ វីដេអូ និងឯកសារបង្រៀនមិនគិតថ្លៃ</label>
-                <button><a href="#">ចាប់ផ្ដើមរៀនអីឡូវនេះ</a></button>
+            <h3>ស្វែងយល់អំពីវិធីសាស្ត្រនៃការសិក្សា</h3>
+            <ul class="platform-features">
+                <li><img id="checkIcon" src="asset/svg/check.svg" alt=""> វីដេអូ និងឯកសារបង្រៀនមិនគិតថ្លៃ</li>
+                <li><img id="checkIcon" src="asset/svg/check.svg" alt=""> បង្រៀនដោយគ្រូមានបទពិសោធន៍ច្រើនឆ្នាំ</li>
+                <li><img id="checkIcon" src="asset/svg/check.svg" alt=""> វីដេអូ និងឯកសារបង្រៀនមិនគិតថ្លៃ</li>
+            </ul>
+            <button><a href="#">ចាប់ផ្ដើមរៀនអីឡូវនេះ</a></button>
         </div>
         <div class="platform-image">
-            <img src="asset/image/physics.jpg" alt="">
+            <img src="https://cdni.iconscout.com/illustration/premium/thumb/digital-learning-resources-illustration-svg-download-png-9609680.png" alt="">
         </div>
     </div>
     </div>
 
+    <div class="teacher">
+        <div class="teacher-title">
+            <h2>បង្រៀនដោយគ្រូបង្រៀនល្អៗ</h2>
+            <h3>ប្រជុំទៅដោយលោកគ្រូ អ្នកគ្រូមានបទពិសោធន៍ និងចំណេះដឹងច្បាស់លាស់</h3>
+        </div>
+        <div class="teacher-profile" id="teacher-profile">
+            <!-- <div class="teacher-profile-item">
+                <img src="asset/author/mainpfp.jpg" alt="teacher-profile">
+                <div class="teacher-profile-text">
+                    <h2>លោកគ្រូ វិឈាន សម្បត្តិ</h2>
+                    <h3>បរិញ្ញាបត្រ វិទ្យាសាស្ត្រកុំព្យូទ័រ</h3>
+                </div>
+            </div> -->
+        </div>
+        <div class="teacher-part">
+            <button id="teacher-number" class="teacher-current" onclick="backTeacher()">១</button>
+            <button id="teacher-number" class="teacher-current" onclick="nextTeacher()">២</button>
+            <button id="nextTeacherBtn" onclick="nextTeacher()">បន្ទាប់</button>
+        </div>
+    </div>
+
+    <div class="register">
+
+        <div class="register-card">
+            <div class="tag">
+                <p>ក្លាយខ្លួនទៅជាសិស្សដ៏ល្អ!</p>
+            </div>
+            <h1>ពង្រឹង<span>ការសិក្សា</span>របស់អ្នកជាមួយយើង</h1>
+            <p>ចូលរួមជាមួយសហគមន៍អ្នកបង្រៀនអំពី +50,000 នាក់។ យើងផ្ដល់ឧបករណ៍ សំរាប់ជំនួយ និងការចូលដល់ជំរុញសកល ដើម្បីជួយអ្នកបង្កើតអាជីវកម្មបង្រៀនអនឡាញដែលចំណេញ។</p>
+            <div class="tag-button">
+                <button id="tag-community"><a href="#">
+                    សហគមន៍
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a></button>
+                <button id="tag-learnMore">
+                    <a href="#">
+                        បន្ថែម
+                    </a>
+                </button>
+            </div>
+            <hr>
+            <div class="register-record">
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-Item">
+            <div class="footerProfile footerItem">
+                <div class="logo">
+                    <a href="#">ចក្រា</a>
+                </div>
+                <p>Redefining online education through high-quality, expert-led content that
+                    help you stay ahead in ever-changing professional landscape.
+                </p>
+                <div class="footerSocial">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="footerPartner footerItem">
+                <h1>ដៃគូសហការ</h1>
+                <a href="#">EDP IELTS Cambodia</a>
+                <a href="#">ACLEDA University</a>
+                <a href="#">4Null Teams Cambodia</a>
+            </div>
+            <div class="footerReference footerItem">
+                <h1>ឯកសារយោង</h1>
+                <a href="#">ACLEDA University of Business</a>
+                <a href="#">International English Language Testing</a>
+            </div>
+        </div>
+        <div class="footer-Copyright">
+            © 2026 Jakra. All Rights Reserved.
+        </div>
+    </footer>
 </body>
 <script src="jquery.js"></script>
 <script src="script/landing.js"></script>

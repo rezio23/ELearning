@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/allcourse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bayon&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakra E-Learning</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-contact">
+            <div class="contact-left">
+                <div class="header-call">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">+855 12 233 344</a>
+                </div>
+                <div class="header-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="#">username@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div class="header-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="#">Location</a>
+                </div>
+                <div class="header-location">
+                    <i class="fa-solid fa-robot"></i>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-ul">
+            <div class="logo">
+                <a href="#">ចក្រា</a>
+            </div>
+            <ul>
+                <li><a href="#">ដំបូង</a></li>
+                <li><a href="#">ទំព័រ</a></li>
+                <li><a href="#">វគ្គសិក្សា</a></li>
+                <li><a href="#">ប្លុក</a></li>
+                <li><a href="#">ទំនិញ</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="header-search">
+                    <img src="../asset/svg/search.svg" class="icon" alt="search">
+                    <input type="text" placeholder="ស្វែងរក...">
+                </div>
+                <button><a href="#">ចូល</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="future">
+        <h1>សិក្សាដើម្បីអនាគតដ៏ភ្លឺស្វាងរបស់លោកអ្នក</h1>
+        <p>ទំព័រដើម <i class="fa-solid fa-arrow-right"></i> <a href="#">មើលវគ្គទាំងអស់</a></p>
+    </div>
+
+    <div class="container">
+        <div class="container-left">
+            <div class="left-search">
+                <h2>ស្វែងរក</h2>
+                <div class="left-search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="ស្វែងរកមេរៀន...">
+                </div>
+                <button id="searchBtn"><a href="#">ស្វែងរក</a></button>
+            </div>
+
+            <div class="course-category">
+                <h2>បណ្ដុំមេរៀន</h2>
+                <div class="category-list">
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="all" checked> ទាំងអស់</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="free"> មិនគិតថ្លៃ</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="math"> គណិតវិទ្យា</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="physic"> រូបវិទ្យា</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="science"> បច្ចេកវិទ្យា</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="health"> សុខភាព</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="business"> ជំនួញ</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="general"> ចំណេះដឹងទូទៅ</p><span>( 20មេរៀន )</span></label>
+                    <label for="free"><p><input type="checkbox" name="checkBox" value="design"> រចនារូបភាព</p><span>( 20មេរៀន )</span></label>
+                </div>
+            </div>
+        </div>
+        <div class="container-right">
+            <div class="container-title">
+                <h3><span>១០មេរៀន</span> បានរកឃើញ</h3>
+                <div class="title-sorted">
+                    <h3>តម្រៀបតាម៖ </h3>
+                    <select name="courseSelect" id="courseSelect">
+                        <option value="Name">ដើម</option>
+                        <option value="Name">ឈ្មោះ</option>
+                        <option value="Name">ថ្ងៃ</option>
+                    </select>
+                </div>
+            </div>
+            <div class="course-item" id="course-item">
+
+                <!-- <div class="lesson" id="lesson1">
+                    <img src="https://wallpapers.com/images/featured/physics-w4ac9eqvnunc0ocp.jpg" alt="imageCourse">
+                    <div class="lessonType">
+                        <label for="lessonMain"><i class="fa-regular fa-circle-play"></i> ២០ មេរៀន</label>
+                        <div class="lessonCategory">
+                            <label for="category">គណិតវិទ្យា</label>
+                        </div>
+                    </div>
+                    <h3>គណិតវិទ្យា - ធរណីមាត្រ</h3>
+                    <hr>
+
+                    <div class="lessonProfile">
+                        <img src="../asset/author/mainpfp.jpg" alt="pfp">
+                        <div class="self-Profile">
+                            <h3>វិឈាន សម្បត្តិ</h3>
+                            <label for="major">វិទ្យាសាស្ត្រកុំព្យូទ័រ</label>
+                        </div>
+                        <label for="taughtStudent"><span>៥០+</span> នាក់</label>
+
+                    </div>
+                    <hr>
+                    <div class="lesson-Price">
+                        <label for="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label>
+                        <label for="price"><del>19.99$</del> Free</label>
+                    </div>
+                    <button><a href="#">ដាក់ចូលកន្ត្រក</a></button>
+                </div> -->
+
+            </div>
+            <button onclick="ShowAllCourse()">មើលទាំងអស់</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-Item">
+            <div class="footerProfile footerItem">
+                <div class="logo">
+                    <a href="#">ចក្រា</a>
+                </div>
+                <p>Redefining online education through high-quality, expert-led content that
+                    help you stay ahead in ever-changing professional landscape.
+                </p>
+                <div class="footerSocial">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="footerPartner footerItem">
+                <h1>ដៃគូសហការ</h1>
+                <a href="#">EDP IELTS Cambodia</a>
+                <a href="#">ACLEDA University</a>
+                <a href="#">4Null Teams Cambodia</a>
+            </div>
+            <div class="footerReference footerItem">
+                <h1>ឯកសារយោង</h1>
+                <a href="#">ACLEDA University of Business</a>
+                <a href="#">International English Language Testing</a>
+            </div>
+        </div>
+        <div class="footer-Copyright">
+            © 2026 Jakra. All Rights Reserved.
+        </div>
+    </footer>
+</body>
+<script src="../script/allcourse.js"></script>
+</html>
