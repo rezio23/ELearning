@@ -1,3 +1,8 @@
+/* Constrain wide sections for better readability */
+:root {
+    --max-content-width: 1200px;
+}
+
 /* Global improvements: typography and base layout */
 body {
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -5,10 +10,6 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-:root {
-    --max-content-width: 1200px;
 }
 
 .container {
@@ -20,7 +21,144 @@ body {
     padding: 35px 7.5vw;
 }
 
+.container-left {
+    width: 70%;
+    height: auto;
+    padding: 25px 25px;
+    border: solid 1px red;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    align-self: flex-start;
+}
 
+.placed-order{
+    width: 60%;
+    height: auto;
+    padding: 5px 1.5vw;
+    background-color: white;
+    border-radius: 0px;
+    float: left;
+    gap: 20px;
+}
+
+.placed-order hr{
+    width: 100%;
+    border: solid 1px orangered;
+}
+
+.placed-title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.placed-title h3,
+.placed-title h4{
+    font-family: 'Inter', Arial;
+}
+
+.add-order{
+    width: 39%;
+    height: 300px;
+    background-color: white;
+    border-radius: 0px;
+}
+
+.ordered-course{
+    width: 100%;
+    height: auto;
+}
+
+.course {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.course img{
+    width: 60px;
+    border-radius: 5px;
+}
+
+.ordered-course hr{
+    width: 100%;
+    border: solid 1px #bbb;
+}
+
+.price{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    float: left;
+}
+
+.price label,
+.price del{
+    font-family: 'Inter', Arial;
+}
+
+.course button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #bbb;
+    color: var(--button-color);
+    border-radius: 50%;
+    float: right;
+    margin-left: auto;
+}
+
+.cost{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.cost label,
+.cost h3{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter';
+}
+
+.cost label span,
+.placed-order h3 span{
+    font-family: 'Inter';
+}
+
+#cost-subtotal,
+#cost-fee{
+    color: var(--text-disabled);
+}
+
+#cost-discount{
+    color: var(--price-color);
+}
+
+.cost h3,
+.cost h3 span{
+    font-weight: 600;
+}
+
+.cost h3 span{
+    color: orangered;
+}
 .container-right {
     width: 28%;
     height: auto;
@@ -203,142 +341,3 @@ body {
     background-color: var(--button-hover-color);
 }
 
-
-.container-left {
-    width: 70%;
-    height: auto;
-    padding: 25px 25px;
-    border: solid 1px red;
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    gap: 20px;
-    align-self: flex-start;
-}
-
-.placed-order{
-    width: 60%;
-    height: auto;
-    padding: 5px 1.5vw;
-    background-color: white;
-    border-radius: 0px;
-    float: left;
-    gap: 20px;
-}
-
-.placed-order hr{
-    width: 100%;
-    border: solid 1px orangered;
-}
-
-.placed-title{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.placed-title h3,
-.placed-title h4{
-    font-family: 'Inter', Arial;
-}
-
-.add-order{
-    width: 39%;
-    height: 300px;
-    background-color: white;
-    border-radius: 0px;
-}
-
-.ordered-course{
-    width: 100%;
-    height: auto;
-}
-
-.course {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    padding: 3px 10px;
-    box-sizing: border-box;
-    gap: 15px;
-}
-
-.course img{
-    width: 60px;
-    border-radius: 5px;
-}
-
-.ordered-course hr{
-    width: 100%;
-    border: solid 1px #bbb;
-}
-
-.price{
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    float: left;
-}
-
-.price label,
-.price del{
-    font-family: 'Inter', Arial;
-}
-
-.course button{
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: #bbb;
-    color: var(--button-color);
-    border-radius: 50%;
-    float: right;
-    margin-left: auto;
-}
-
-.cost{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-}
-
-.cost label,
-.cost h3{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Inter';
-}
-
-.cost label span,
-.placed-order h3 span{
-    font-family: 'Inter';
-}
-
-#cost-subtotal,
-#cost-fee{
-    color: var(--text-disabled);
-}
-
-#cost-discount{
-    color: var(--price-color);
-}
-
-.cost h3,
-.cost h3 span{
-    font-weight: 600;
-}
-
-.cost h3 span{
-    color: orangered;
-}

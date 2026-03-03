@@ -1,8 +1,6 @@
-/* Styles moved to top to match HTML order (Header) */
-.header-actions {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+/* Constrain wide sections for better readability */
+:root {
+    --max-content-width: 1200px;
 }
 
 /* Global improvements: typography and base layout */
@@ -14,9 +12,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Constrain wide sections for better readability */
-:root {
-    --max-content-width: 1200px;
+/* Styles moved to top to match HTML order (Header) */
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 /* Container */
@@ -180,7 +180,7 @@ body {
     justify-content: space-between;
 }
 
-#price label span{
+#price label span {
     font-family: 'Inter', Arial;
     color: var(--price-color);
 }
@@ -302,12 +302,12 @@ body {
 }
 
 .visaCARD,
-.acledaKHQR{
+.acledaKHQR {
     width: 100%;
     height: auto;
 }
 
-.acledaKHQR img{
+.acledaKHQR img {
     width: 100%;
 }
 
@@ -373,36 +373,36 @@ body {
     font-family: 'Inter', Arial;
 }
 
-.select-country option{
+.select-country option {
     width: 100%;
     display: flex;
     padding: 10px;
     font-family: 'Inter', Arial;
 }
 
-#submitCardBtn{
+#submitCardBtn {
     font-family: 'Inter', Arial;
     font-size: 14px;
 }
 
-.rating h2{
+.rating h2 {
     font-family: 'Inter', Arial;
     font-family: 12px;
     font-weight: 700;
 }
 
-.rating p{
+.rating p {
     font-family: 'Inter', Arial;
 }
 
-.rating-star{
+.rating-star {
     width: 100%;
     display: flex;
     gap: 1px;
     align-items: center;
 }
 
-.rating-star i{
+.rating-star i {
     font-size: 18px;
     color: orangered;
 }
@@ -415,7 +415,7 @@ body {
     margin-bottom: 8px;
 }
 
-.bar-row span{
+.bar-row span {
     font-family: 'Inter', Arial;
 }
 
@@ -444,7 +444,8 @@ body {
 
 .bar-fill {
     height: 100%;
-    width: 0%;                         /* starts at 0 for animation */
+    width: 0%;
+    /* starts at 0 for animation */
     background: #f5a623;
     border-radius: 999px;
     transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);

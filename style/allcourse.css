@@ -1,8 +1,6 @@
-/* Styles moved to top to match HTML order (Header) */
-.header-actions {
-    display: flex;
-    gap: 15px;
-    align-items: center;
+/* Constrain wide sections for better readability */
+:root {
+    --max-content-width: 1200px;
 }
 
 /* Global improvements: typography and base layout */
@@ -14,9 +12,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Constrain wide sections for better readability */
-:root {
-    --max-content-width: 1200px;
+/* Styles moved to top to match HTML order (Header) */
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 /* Container */
@@ -60,7 +60,7 @@ body {
     padding-left: 10px;
 }
 
-.container-left h2{
+.container-left h2 {
     font-size: 24px;
 }
 
@@ -85,12 +85,12 @@ body {
     transition: 0.5s ease;
 }
 
-.left-search button:hover{
+.left-search button:hover {
     background-color: var(--button-hover-color);
     border: 1px solid var(--button-hover-color);
 }
 
-.course-category{
+.course-category {
     width: 100%;
     height: auto;
     display: flex;
@@ -98,7 +98,7 @@ body {
     gap: 10px;
 }
 
-.category-list{
+.category-list {
     width: 100%;
     height: auto;
     display: flex;
@@ -108,14 +108,14 @@ body {
     gap: 5px;
 }
 
-.category-list label{
+.category-list label {
     width: 100%;
     display: flex;
     justify-content: space-between;
     font-weight: 20px;
 }
 
-.category-list label input{
+.category-list label input {
     width: 16px;
     height: 16px;
 }
@@ -155,7 +155,7 @@ body {
     gap: 10px;
 }
 
-.container-right button{
+.container-right button {
     width: 200px;
     height: 45px;
     border-radius: 10px;
@@ -170,11 +170,11 @@ body {
     transition: 0.5s ease;
 }
 
-.container-right button:hover{
+.container-right button:hover {
     background-color: var(--button-hover-color);
 }
 
-.course-item{
+.course-item {
     width: 100%;
     height: auto;
     display: flex;
@@ -183,7 +183,7 @@ body {
     gap: 2%;
 }
 
-.lesson{
+.lesson {
     width: 32%;
     float: left;
     height: auto;
@@ -194,27 +194,18 @@ body {
     background-color: white;
 }
 
-.lesson:hover{
+.lesson:hover {
     transform: scale(1.02) translateY(-5px);
 }
 
-.lesson img{
+.lesson img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.lesson hr{
-    width: 100%;
-    border: solid 1px lightgray;
-}
-
-.lesson h3{
-    margin-top: 10px;
-}
-
-.lessonType{
+.lessonType {
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -223,7 +214,7 @@ body {
     justify-content: space-between;
 }
 
-.lessonCategory{
+.lessonCategory {
     height: 20px;
     display: flex;
     align-items: center;
@@ -233,12 +224,21 @@ body {
     background-color: rgb(183, 236, 255);
 }
 
-.lessonCategory label{
+.lessonCategory label {
     font-size: 10px;
     color: rgb(0, 183, 255);
 }
 
-.lessonProfile{
+.lesson h3 {
+    margin-top: 10px;
+}
+
+.lesson hr {
+    width: 100%;
+    border: solid 1px lightgray;
+}
+
+.lessonProfile {
     width: 100%;
     height: auto;
     display: flex;
@@ -246,13 +246,13 @@ body {
     justify-content: space-between;
 }
 
-.lessonProfile img{
+.lessonProfile img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-.self-Profile{
+.self-Profile {
     height: 100%;
     width: auto;
     display: flex;
@@ -262,15 +262,15 @@ body {
     margin-right: 30%;
 }
 
-.self-Profile h3{
+.self-Profile h3 {
     font-size: 18px;
 }
 
-.self-Profile label{
+.self-Profile label {
     font-size: 12px;
 }
 
-.lesson-Price{
+.lesson-Price {
     width: 100%;
     display: flex;
     align-items: center;
@@ -278,25 +278,25 @@ body {
 }
 
 .lesson-Price label,
-.lesson-Price del{
+.lesson-Price del {
     font-size: 16px;
     font-family: 'Inter', Arial;
 }
 
-.lesson-Price label{
+.lesson-Price label {
     color: var(--price-color);
 }
 
-.lesson-Price del{
+.lesson-Price del {
     color: var(--text-disabled);
 }
 
-.lesson-Price label i{
+.lesson-Price label i {
     font-weight: 10px;
     color: orangered;
 }
 
-.lesson button{
+.lesson button {
     width: 100%;
     height: 45px;
     border-radius: 5px;
@@ -307,14 +307,14 @@ body {
     transition: 0.5s ease;
 }
 
-.lesson button a{
+.lesson button a {
     color: white;
 }
 
-.lesson button:hover{
+.lesson button:hover {
     background-color: var(--button-hover-color);
 }
 
-footer{
+footer {
     background-color: var(--lightPurple-background-color);
 }
