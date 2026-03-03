@@ -132,7 +132,7 @@ section {
 /* Course Item Container */
 .course-item {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
@@ -143,7 +143,7 @@ section {
 .course-item-card {
     /* Original Block 1 */
     width: 25%;
-    height: 400px;
+    height: auto;
     border: solid 1px black;
     display: flex;
     justify-content: start;
@@ -152,18 +152,33 @@ section {
     float: left;
 }
 
+.course-item-card button {
+    width: 100%;
+    margin-top: 15px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--button-color);
+    transition: 0.5s ease;
+}
+
+.course-item-card button:hover {
+    background-color: var(--button-hover-color);
+}
+
 .course-item-card {
     /* Original Block 2 - Overrides Block 1 where applicable */
-    width: 280px;
+    width: 24%;
     max-width: 100%;
     background: var(--background-color);
-    border-radius: 12px;
+    border-radius: 0px;
     box-shadow: 0 6px 18px var(--shadow-medium);
     border: none;
     padding: 14px;
     margin: 0;
     position: relative;
-    transition: transform 200ms ease, box-shadow 200ms ease;
+    transition: 0.5s ease;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -314,6 +329,11 @@ section {
     transform: translateY(-2px);
     background-color: var(--button-hover-color);
     color: var(--text-white);
+}
+
+#nextBtn,
+#nextTeacherBtn {
+    width: 90px;
 }
 
 #course-number,
@@ -650,7 +670,7 @@ section {
     padding: 20px 20px;
     border-start-end-radius: 35px;
     margin-top: 20px;
-    border: solid 1px black;
+    border: solid 1px orangered;
     border-left: solid 5px var(--button-hover-color);
 }
 

@@ -59,14 +59,85 @@ body {
 .placed-title h3,
 .placed-title h4{
     font-family: 'Inter', Arial;
+    font-weight: 600;
 }
 
 .add-order{
     width: 39%;
-    height: 300px;
     background-color: white;
     border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 5px 1.5vw;
+    padding-bottom: 20px;
 }
+
+.add-order h3{
+    font-weight: 600;
+    font-family: 'Inter';
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add-order label del,
+.add-order label span{
+    font-family: 'Inter', Arial;
+}
+
+.add-order label del{
+    color: var(--text-disabled);
+}
+
+.add-order label span{
+    color: var(--price-color);
+}
+
+.course-add{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 10px;
+    background-color: #dbdbdb64;
+    border-bottom: solid 1px #bbb;
+}
+
+.course-add img{
+    width: 40px;
+    border-radius: 4px;
+    float: left;
+}
+
+.course-add-price{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.course-add-price h4,
+.course-add-price label{
+    line-height: 1;
+    margin: 0;
+}
+
+.course-add button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--button-hover-color);
+    color: white;
+    margin-left: auto;
+    float: right;
+    cursor: pointer;
+}
+
 
 .ordered-course{
     width: 100%;
@@ -118,6 +189,7 @@ body {
     border-radius: 50%;
     float: right;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .cost{

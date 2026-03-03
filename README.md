@@ -9,6 +9,7 @@ A modern, responsive e-learning platform frontend built with HTML, CSS, and Vani
 *   **Interactive Enrollment**: A functional frontend shopping cart and enrollment page with cost calculations displaying subtotals, discounts, and processing fees.
 *   **Multiple Payment Methods UI**: Dedicated UI sections for checking out via traditional **VISA Cards** as well as local digital payment solutions like **ACLEDA KHQR**.
 *   **Responsive & Modular Design**: The platform is fully responsive across desktop and mobile devices. The CSS is highly modular, utilizing CSS variables (custom properties) for theming, making it highly maintainable and visually consistent.
+*   **Enhanced Element Workflows**: Layout optimizations on actionable items like selections, list elements, and enrollment components, ensuring robust rendering across pages.
 
 ## 🚀 Future Uses & Enhancements
 
@@ -22,7 +23,7 @@ A modern, responsive e-learning platform frontend built with HTML, CSS, and Vani
 ## 💻 Tech Stack
 *   **HTML5**
 *   **CSS3** (Custom Properties, Flexbox, Grid)
-*   **Vanilla JavaScript**
+*   **Vanilla JavaScript** (with **jQuery** integration)
 *   **FontAwesome** (Icons)
 *   **Google Fonts** (Bayon, Inter)
 

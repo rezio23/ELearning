@@ -205,6 +205,12 @@ header a:hover {
     color: var(--button-color);
 }
 
+header .header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
 header .header-search {
     display: flex;
     align-items: center;
@@ -352,7 +358,7 @@ footer {
 }
 
 .footerPartner a,
-.footerReference a{
+.footerReference a {
     font-size: 20px;
     font-family: 'Inter', Arial;
     font-weight: 500;

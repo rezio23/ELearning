@@ -191,7 +191,7 @@ for (let i in data) {
             <label for="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label>
             <label for="price"><del>${lesson.lessonOldPrice}$</del> ${lesson.lessonNewPrice}</label>
         </div>
-        <button><a href="#">ដាក់ចូលកន្ត្រក</a></button>
+        <button><a href="course_details.html" target="_blank">ដាក់ចូលកន្ត្រក</a></button>
     </div>
     `;
 
@@ -207,335 +207,58 @@ check.forEach((checked) => {
     });
 
     if (checked.value == "all") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "block";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
+      $(
+        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
+      ).show();
     } else if (checked.value == "math") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "block";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
+      $('[data-category="Math"]').show();
+      $(
+        '[data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
+      ).hide();
     } else if (checked.value == "physic") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "none";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
+      $('[data-category="Physic"]').show();
+      $(
+        '[data-category="Math"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
+      ).hide();
     } else if (checked.value == "business") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "none";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
+      $('[data-category="Business"]').show();
+      $(
+        '[data-category="Math"], [data-category="Physic"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
+      ).hide();
     } else if (checked.value == "general") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "none";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
+      $('[data-category="General"]').show();
+      $(
+        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
+      ).hide();
     } else if (checked.value == "health") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "none";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
+      $('[data-category="Health"]').show();
+      $(
+        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Design"], [data-category="Science"]',
+      ).hide();
     } else if (checked.value == "design") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "none";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
+      $('[data-category="Design"]').show();
+      $(
+        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Science"]',
+      ).hide();
     } else if (checked.value == "science") {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "none";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "none";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
+      $('[data-category="Science"]').show();
+      $(
+        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"]',
+      ).hide();
     } else {
-      document.querySelectorAll('[data-category="Math"]').forEach((element) => {
-        element.style.display = "block";
-      });
-      document
-        .querySelectorAll('[data-category="Physic"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Business"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="General"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Health"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Design"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
-      document
-        .querySelectorAll('[data-category="Science"]')
-        .forEach((element) => {
-          element.style.display = "block";
-        });
+      $(
+        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
+      ).show();
     }
   });
 });
 
-document.getElementById("course1").style.display = "block";
-document.getElementById("course2").style.display = "block";
-document.getElementById("course3").style.display = "block";
-document.getElementById("course4").style.display = "none";
-document.getElementById("course5").style.display = "none";
-document.getElementById("course6").style.display = "none";
-document.getElementById("course7").style.display = "none";
-document.getElementById("course8").style.display = "none";
-document.getElementById("course9").style.display = "none";
+$("#course1, #course2, #course3").show();
+$("#course4, #course5, #course6, #course7, #course8, #course9").hide();
 
-function ShowAllCourse() {
-
-  document.getElementById("course1").style.display = "block";
-  document.getElementById("course2").style.display = "block";
-  document.getElementById("course3").style.display = "block";
-  document.getElementById("course4").style.display = "block";
-  document.getElementById("course5").style.display = "block";
-  document.getElementById("course6").style.display = "block";
-  document.getElementById("course7").style.display = "block";
-  document.getElementById("course8").style.display = "block";
-  document.getElementById("course9").style.display = "block";
-
-}
+// function ShowAllCourse() {$("#course1, #course2, #course3, #course4, #course5, #course6, #course7, #course8, #course9").show();}
+const ShowAllCourse = () => {
+  $(
+    "#course1, #course2, #course3, #course4, #course5, #course6, #course7, #course8, #course9",
+  ).show();
+};

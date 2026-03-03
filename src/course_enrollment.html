@@ -77,29 +77,35 @@
                     <h4>1 Course</h4>
                 </div>
                 <hr>
-                <div class="ordered-course">
+                <div class="ordered-course" id="ordered-course">
                     <div class="course" id="course">
-                        <!--  -->
                         <img src="../asset/author/mainpfp.jpg" alt="">
                         <div class="price">
                             <h3>គណិតវិទ្យា</h3>
                             <label for="price"><del>$19.99</del> Free</label>
                         </div>
-                        <button><i class="fa-solid fa-minus"></i></button>
+                        <button id="deleteBtn"><i class="fa-solid fa-minus"></i></button>
                     </div>
                     <hr>
-                    <!--  -->
                 </div>
                 <div class="cost">
-                    <label for="subtotal" id="cost-subtotal">Subtotal <span>$ 19.99</span></label>
-                    <label for="discount" id="cost-discount">Discount <span>$ 19.99</span></label>
+                    <label for="subtotal" id="cost-subtotal">Subtotal <span id="spanCost">$ 19.99</span></label>
+                    <label for="discount" id="cost-discount">Discount <span id="spanDiscount">$ 19.99</span></label>
                     <label for="visafee" id="cost-fee">Visa Fee (3%) <span>$0</span></label>
                     <hr>
                     <h3>Total <span>Free</span></h3>
                 </div>
             </div>
-            <div class="add-order">
-                
+            <div class="add-order" id="add-order">
+                <h3>Add Courses</h3>
+                <!-- <div class="course-add">
+                    <img src="../asset/author/mainpfp.jpg" alt="courseImg">
+                    <div class="course-add-price">
+                        <h4>កង់ទិចរូបវិទ្យា</h4>
+                        <label for="coursePrice"><del>$19.99</del><span> Free</span></label>
+                    </div>
+                    <button id="addBtn"><i class="fa-solid fa-plus"></i></button>
+                </div> -->
             </div>
 
 
@@ -127,7 +133,6 @@
                             <label for="country">Country or region</label>
                             <select id="country">
                                 <option value="Cambodia">Cambodia</option>
-                                <option value="Thailand">Thailand</option>
                                 <option value="Vietnam">Vietnam</option>
                                 <option value="Laos">Laos</option>
                                 <option value="Myanmar">Myanmar</option>
@@ -186,6 +191,7 @@
     </footer>
 
 </body>
+<script src="../jquery.js"></script>
 <script src="../script/course_enrollment.js"></script>
 
 </html>
