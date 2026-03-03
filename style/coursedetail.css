@@ -124,7 +124,8 @@ body {
 
 .teacher,
 .curriculum,
-.payment {
+.payment,
+.rating {
     width: 100%;
     height: auto;
     display: flex;
@@ -136,7 +137,8 @@ body {
 
 .teacher hr,
 .curriculum hr,
-.payment hr {
+.payment hr,
+.rating hr {
     width: 100%;
     border: solid 1px rgba(0, 0, 0, 0.075);
 }
@@ -178,9 +180,13 @@ body {
     justify-content: space-between;
 }
 
-.teacher-description label span {
-    color: var(--price-color);
+#price label span{
     font-family: 'Inter', Arial;
+    color: var(--price-color);
+}
+
+.teacher-description label span {
+    color: #bbb;
 }
 
 .teacher-description label del {
@@ -194,7 +200,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--text-secondary);
+    background-color: #bbb;
 }
 
 .curriculum-description label button a {
@@ -230,7 +236,8 @@ body {
 }
 
 .curriculum h3,
-.payment h3 {
+.payment h3,
+.rating h3 {
     font-family: 'Inter', Arial;
     font-weight: 500;
     font-size: 28px;
@@ -292,6 +299,16 @@ body {
     font-weight: 500;
     margin-left: 10px;
     font-family: 'Inter', Arial;
+}
+
+.visaCARD,
+.acledaKHQR{
+    width: 100%;
+    height: auto;
+}
+
+.acledaKHQR img{
+    width: 100%;
 }
 
 .visa-payment input {
@@ -366,4 +383,76 @@ body {
 #submitCardBtn{
     font-family: 'Inter', Arial;
     font-size: 14px;
+}
+
+.rating h2{
+    font-family: 'Inter', Arial;
+    font-family: 12px;
+    font-weight: 700;
+}
+
+.rating p{
+    font-family: 'Inter', Arial;
+}
+
+.rating-star{
+    width: 100%;
+    display: flex;
+    gap: 1px;
+    align-items: center;
+}
+
+.rating-star i{
+    font-size: 18px;
+    color: orangered;
+}
+
+/* Bar rows */
+.bar-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.bar-row span{
+    font-family: 'Inter', Arial;
+}
+
+.star-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+    min-width: 30px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.star-label i {
+    color: #f5a623;
+    font-size: 12px;
+}
+
+.bar-track {
+    flex: 1;
+    height: 8px;
+    background: #f0f0f0;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0%;                         /* starts at 0 for animation */
+    background: #f5a623;
+    border-radius: 999px;
+    transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.count-label {
+    font-size: 12px;
+    color: #999;
+    min-width: 55px;
+    text-align: right;
 }

@@ -1,0 +1,344 @@
+/* Global improvements: typography and base layout */
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    --max-content-width: 1200px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    box-sizing: border-box;
+    padding: 35px 7.5vw;
+}
+
+
+.container-right {
+    width: 28%;
+    height: auto;
+    padding: 5px 5px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.payment {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    gap: 10px;
+    border: solid 1px red;
+}
+
+.payment h3{
+    font-family: 'Inter', Arial;
+}
+
+.payment hr {
+    width: 100%;
+    border: solid 1px rgba(0, 0, 0, 0.075);
+}
+
+#price label span {
+    font-family: 'Inter', Arial;
+    color: var(--price-color);
+}
+
+.payment-method {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.payment-method button {
+    width: 48%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--button-color);
+    color: white;
+    font-family: 'Inter', Arial;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#acleda {
+    background-color: lightgray;
+    color: var(--button-color);
+}
+
+#acleda:hover {
+    background-color: var(--button-hover-color);
+    color: white;
+}
+
+.payment-method button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.visa-payment,
+.visa-address {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.payment label {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 10px;
+    font-family: 'Inter', Arial;
+}
+
+.visaCARD,
+.acledaKHQR {
+    width: 100%;
+    height: auto;
+}
+
+.acledaKHQR img {
+    width: 100%;
+}
+
+.visa-payment input {
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Inter', Arial;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#cardNumber {
+    width: 100%;
+}
+
+#expirationDate {
+    width: 67.5%;
+}
+
+#securityCode {
+    width: 29%;
+}
+
+.visa-address {
+    flex-direction: column;
+}
+
+.visa-address input {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Inter', Arial;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.select-country {
+    width: 100%;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: gray;
+    font-family: 'Inter', Arial;
+}
+
+.select-country label {
+    display: block;
+    font-size: 14px;
+    color: #bbb;
+    margin-bottom: 5px;
+}
+
+.select-country select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+    font-family: 'Inter', Arial;
+}
+
+.select-country option {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    font-family: 'Inter', Arial;
+}
+
+#submitCardBtn {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    color: white;
+    background-color: var(--button-color);
+    border: none;
+    transition: 0.5s ease;
+    font-family: 'Inter', Arial;
+    font-size: 14px;
+}
+
+#submitCardBtn:hover {
+    background-color: var(--button-hover-color);
+}
+
+
+.container-left {
+    width: 70%;
+    height: auto;
+    padding: 25px 25px;
+    border: solid 1px red;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+    align-self: flex-start;
+}
+
+.placed-order{
+    width: 60%;
+    height: auto;
+    padding: 5px 1.5vw;
+    background-color: white;
+    border-radius: 0px;
+    float: left;
+    gap: 20px;
+}
+
+.placed-order hr{
+    width: 100%;
+    border: solid 1px orangered;
+}
+
+.placed-title{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.placed-title h3,
+.placed-title h4{
+    font-family: 'Inter', Arial;
+}
+
+.add-order{
+    width: 39%;
+    height: 300px;
+    background-color: white;
+    border-radius: 0px;
+}
+
+.ordered-course{
+    width: 100%;
+    height: auto;
+}
+
+.course {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    box-sizing: border-box;
+    gap: 15px;
+}
+
+.course img{
+    width: 60px;
+    border-radius: 5px;
+}
+
+.ordered-course hr{
+    width: 100%;
+    border: solid 1px #bbb;
+}
+
+.price{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    float: left;
+}
+
+.price label,
+.price del{
+    font-family: 'Inter', Arial;
+}
+
+.course button{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #bbb;
+    color: var(--button-color);
+    border-radius: 50%;
+    float: right;
+    margin-left: auto;
+}
+
+.cost{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.cost label,
+.cost h3{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter';
+}
+
+.cost label span,
+.placed-order h3 span{
+    font-family: 'Inter';
+}
+
+#cost-subtotal,
+#cost-fee{
+    color: var(--text-disabled);
+}
+
+#cost-discount{
+    color: var(--price-color);
+}
+
+.cost h3,
+.cost h3 span{
+    font-weight: 600;
+}
+
+.cost h3 span{
+    color: orangered;
+}

@@ -128,20 +128,20 @@
                     </div>
                 </div>
                 <hr>
-                <div class="course-price teacher-description"><label for="price">តម្លៃ<span><del>$19.99</del>
+                <div class="course-price teacher-description" id="price"><label for="price">តម្លៃ<span><del>$19.99</del>
                             Free</span></label></div>
                 <hr>
-                <div class="course-level teacher-description"><label for="level">កម្រិតនៃមេរៀន<span><del>$19.99</del>
-                            Free</span></label></div>
+                <div class="course-level teacher-description"><label for="level">កម្រិតនៃមេរៀន<span>មធ្យម</span></label>
+                </div>
                 <hr>
-                <div class="course-enrolled teacher-description"><label
-                        for="enrolled">ចំនួនសិស្សចុះឈ្មោះ<span><del>$19.99</del> Free</span></label></div>
+                <div class="course-enrolled teacher-description"><label for="enrolled">ចំនួនសិស្សចុះឈ្មោះ<span>៥៤
+                            នាក់</span></label></div>
                 <hr>
-                <div class="course-duration teacher-description"><label for="duration">រយៈពេល<span><del>$19.99</del>
-                            Free</span></label></div>
+                <div class="course-duration teacher-description"><label for="duration">រយៈពេល<span>៣២៣
+                            នាទី</span></label></div>
                 <hr>
-                <div class="course-start teacher-description"><label for="start">ថ្ងៃចាប់ផ្ដើម<span><del>$19.99</del>
-                            Free</span></label></div>
+                <div class="course-start teacher-description"><label for="start">ថ្ងៃចាប់ផ្ដើម<span>១២ មេសា
+                            ២០២៦</span></label></div>
                 <button id="registerBtn"><a href="#">ចុះឈ្មោះ</a></button>
             </div>
 
@@ -174,41 +174,98 @@
             </div>
 
 
-            <div class="payment">
+            <!-- <div class="payment">
                 <h3>Select Payment Method</h3>
                 <div class="payment-method">
-                    <button id="visa">VISA CARD</button>
-                    <button id="acleda">ACLEDA KHQR</button>
+                    <button id="visa" onclick="visaMethod()">VISA CARD</button>
+                    <button id="acleda" onclick="acledaMethod()">ACLEDA KHQR</button>
                 </div>
                 <hr>
-                <label for="cardInformation">Card Information</label>
-                <div class="visa-payment">
-                    <input type="number" id="cardNumber" name="cardNumber" placeholder="Card Number">
-                    <input type="number" id="expirationDate" name="expirationDate" placeholder="Expiration Date">
-                    <input type="number" id="securityCode" name="securityCode" placeholder="CVC">
-                </div>
-                <hr>
-                <div class="visa-address">
-                    <input type="text" id="fullName" placeholder="Full Name">
-                    <div class="select-country">
-                        <label for="country">Country or region</label>
-                        <select id="country">
-                            <option value="Cambodia">Cambodia</option>
-                            <option value="Thailand">Thailand</option>
-                            <option value="Vietnam">Vietnam</option>
-                            <option value="Laos">Laos</option>
-                            <option value="Myanmar">Myanmar</option>
-                            <option value="Malaysia">Malaysia</option>
-                            <option value="Singapore">Singapore</option>
-                            <option value="Indonesia">Indonesia</option>
-                            <option value="Philippines">Philippines</option>
-                            <option value="Brunei">Brunei</option>
-                        </select>
+                <div class="visaCARD" id="visaCARD">
+                    <label for="cardInformation">Card Information</label>
+                    <div class="visa-payment">
+                        <input type="number" id="cardNumber" name="cardNumber" placeholder="Card Number">
+                        <input type="number" id="expirationDate" name="expirationDate" placeholder="Expiration Date">
+                        <input type="number" id="securityCode" name="securityCode" placeholder="CVC">
                     </div>
-                    <input type="text" id="address" placeholder="Address Line 1">
+                    <hr>
+                    <div class="visa-address">
+                        <input type="text" id="fullName" placeholder="Full Name">
+                        <div class="select-country">
+                            <label for="country">Country or region</label>
+                            <select id="country">
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Laos">Laos</option>
+                                <option value="Myanmar">Myanmar</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Philippines">Philippines</option>
+                                <option value="Brunei">Brunei</option>
+                            </select>
+                        </div>
+                        <input type="text" id="address" placeholder="Address Line 1">
+                    </div>
+                </div>
+                <div class="acledaKHQR" id="acledaKHQR">
+                    <img src="../asset/image/khqr.jpg" alt="KHQR">
                 </div>
                 <hr>
                 <button id="submitCardBtn">Submit</button>
+            </div> -->
+
+            <div class="rating">
+                <h3>Student Feedback</h3>
+                <h2>3.0</h2>
+                <div class="rating-star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>Total 23 rated</p>
+                <div class="linebar">
+                    <div class="linebar">
+                        <div class="bar-row">
+                            <span class="star-label">5 <i class="fa-solid fa-star"></i></span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-pct="52"></div>
+                            </div>
+                            <span class="count-label">12 (52%)</span>
+                        </div>
+                        <div class="bar-row">
+                            <span class="star-label">4 <i class="fa-solid fa-star"></i></span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-pct="22"></div>
+                            </div>
+                            <span class="count-label">5 (22%)</span>
+                        </div>
+                        <div class="bar-row">
+                            <span class="star-label">3 <i class="fa-solid fa-star"></i></span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-pct="17"></div>
+                            </div>
+                            <span class="count-label">4 (17%)</span>
+                        </div>
+                        <div class="bar-row">
+                            <span class="star-label">2 <i class="fa-solid fa-star"></i></span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-pct="9"></div>
+                            </div>
+                            <span class="count-label">2 (9%)</span>
+                        </div>
+                        <div class="bar-row">
+                            <span class="star-label">1 <i class="fa-solid fa-star"></i></span>
+                            <div class="bar-track">
+                                <div class="bar-fill" data-pct="0"></div>
+                            </div>
+                            <span class="count-label">0 (0%)</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -249,5 +306,6 @@
     </footer>
 
 </body>
+<script src="../script/coursedetail.js"></script>
 
 </html>

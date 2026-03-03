@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/course_enrollment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bayon&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakra E-Learning</title>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-contact">
+            <div class="contact-left">
+                <div class="header-call">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">+855 12 233 344</a>
+                </div>
+                <div class="header-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="#">username@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div class="header-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="#">Location</a>
+                </div>
+                <div class="header-location">
+                    <i class="fa-solid fa-robot"></i>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-ul">
+            <div class="logo">
+                <a href="#">ចក្រា</a>
+            </div>
+            <ul>
+                <li><a href="#">ដំបូង</a></li>
+                <li><a href="#">ទំព័រ</a></li>
+                <li><a href="#">វគ្គសិក្សា</a></li>
+                <li><a href="#">ប្លុក</a></li>
+                <li><a href="#">ទំនិញ</a></li>
+            </ul>
+            <div class="header-actions">
+                <div class="header-search">
+                    <img src="../asset/svg/search.svg" class="icon" alt="search">
+                    <input type="text" placeholder="ស្វែងរក...">
+                </div>
+                <button><a href="#">ចូល</a></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="future">
+        <h1>ចំណេះដឹងគឺមិនគិតថ្លៃ ប៉ុន្តែហុចផលជានិរន្តន៍</h1>
+        <p>ទំព័រដើម <i class="fa-solid fa-arrow-right"></i> <a href="#">មើលវគ្គទាំងអស់</a></p>
+    </div>
+
+
+    <div class="container">
+        <div class="container-left">
+            <div class="placed-order">
+                <div class="placed-title">
+                    <h3>Course Ordered</h3>
+                    <h4>1 Course</h4>
+                </div>
+                <hr>
+                <div class="ordered-course">
+                    <div class="course" id="course">
+                        <!--  -->
+                        <img src="../asset/author/mainpfp.jpg" alt="">
+                        <div class="price">
+                            <h3>គណិតវិទ្យា</h3>
+                            <label for="price"><del>$19.99</del> Free</label>
+                        </div>
+                        <button><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                    <hr>
+                    <!--  -->
+                </div>
+                <div class="cost">
+                    <label for="subtotal" id="cost-subtotal">Subtotal <span>$ 19.99</span></label>
+                    <label for="discount" id="cost-discount">Discount <span>$ 19.99</span></label>
+                    <label for="visafee" id="cost-fee">Visa Fee (3%) <span>$0</span></label>
+                    <hr>
+                    <h3>Total <span>Free</span></h3>
+                </div>
+            </div>
+            <div class="add-order">
+                
+            </div>
+
+
+
+        </div>
+        <div class="container-right">
+            <div class="payment">
+                <h3>Select Payment Method</h3>
+                <div class="payment-method">
+                    <button id="visa" onclick="visaMethod()">VISA CARD</button>
+                    <button id="acleda" onclick="acledaMethod()">ACLEDA KHQR</button>
+                </div>
+                <hr>
+                <div class="visaCARD" id="visaCARD">
+                    <label for="cardInformation">Card Information</label>
+                    <div class="visa-payment">
+                        <input type="number" id="cardNumber" name="cardNumber" placeholder="Card Number">
+                        <input type="number" id="expirationDate" name="expirationDate" placeholder="Expiration Date">
+                        <input type="number" id="securityCode" name="securityCode" placeholder="CVC">
+                    </div>
+                    <hr>
+                    <div class="visa-address">
+                        <input type="text" id="fullName" placeholder="Full Name">
+                        <div class="select-country">
+                            <label for="country">Country or region</label>
+                            <select id="country">
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Laos">Laos</option>
+                                <option value="Myanmar">Myanmar</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="Philippines">Philippines</option>
+                                <option value="Brunei">Brunei</option>
+                            </select>
+                        </div>
+                        <input type="text" id="address" placeholder="Address Line 1">
+                    </div>
+                </div>
+                <div class="acledaKHQR" id="acledaKHQR">
+                    <img src="../asset/image/khqr.jpg" alt="KHQR">
+                </div>
+                <hr>
+                <button id="submitCardBtn">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-Item">
+            <div class="footerProfile footerItem">
+                <div class="logo">
+                    <a href="#">ចក្រា</a>
+                </div>
+                <p>Redefining online education through high-quality, expert-led content that
+                    help you stay ahead in ever-changing professional landscape.
+                </p>
+                <div class="footerSocial">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="footerPartner footerItem">
+                <h1>ដៃគូសហការ</h1>
+                <a href="#">EDP IELTS Cambodia</a>
+                <a href="#">ACLEDA University</a>
+                <a href="#">4Null Teams Cambodia</a>
+            </div>
+            <div class="footerReference footerItem">
+                <h1>ឯកសារយោង</h1>
+                <a href="#">ACLEDA University of Business</a>
+                <a href="#">International English Language Testing</a>
+            </div>
+        </div>
+        <div class="footer-Copyright">
+            © 2026 Jakra. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+<script src="../script/course_enrollment.js"></script>
+
+</html>
