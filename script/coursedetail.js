@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         document.querySelectorAll('.bar-fill').forEach(bar => {

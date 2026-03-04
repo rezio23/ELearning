@@ -195,10 +195,10 @@ for (let i in data) {
     </div>
     `;
 
-  document.getElementById("course-item").innerHTML += lessonItem;
+    $("#course-item").append(lessonItem);
 }
 
-let check = document.querySelectorAll('input[name="checkBox"]');
+let check = $('input[name="checkBox"]');
 
 check.forEach((checked) => {
   checked.addEventListener("change", () => {

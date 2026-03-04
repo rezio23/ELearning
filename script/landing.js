@@ -237,6 +237,7 @@ teachers.forEach((teacher) => {
   $("#teacher-profile").append(teacherData);
 });
 
+
 $("#teacher1, #teacher2, #teacher3, #teacher4").show();
 $("#teacher5, #teacher6, #teacher7, #teacher8").hide();
 
@@ -253,8 +254,5 @@ function backTeacher() {
 function nextTeacher() {
   $("#teacher1, #teacher2, #teacher3, #teacher4").hide();
   $("#teacher5, #teacher6, #teacher7, #teacher8").show();
-  $("#nextTeacherBtn")
-    .text("ត្រឡប់")
-    .off("click", nextTeacher)
-    .on("click", backTeacher);
+  $("#nextTeacherBtn").text("ត្រឡប់").off("click", nextTeacher).on("click", backTeacher);
 }

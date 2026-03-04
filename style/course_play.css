@@ -1,0 +1,265 @@
+/* Constrain wide sections for better readability */
+:root {
+    --max-content-width: 1200px;
+}
+
+/* Global improvements: typography and base layout */
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styles moved to top to match HTML order (Header) */
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    display: flex;
+    height: auto;
+    padding: 20px 7.5vw;
+    align-items: center;
+    justify-content: space-between;
+    background-color: wheat;
+}
+
+.main-left {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.main-left button {
+    height: 40px;
+    border: none;
+    padding: 0px 15px;
+    border-right: solid 1px black;
+    background: transparent;
+    cursor: pointer;
+}
+
+.main-left label {
+    width: 500px;
+    height: auto;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.main-right {
+    width: auto;
+    height: auto;
+    display: flex;
+}
+
+.main-right button {
+    padding: 0px 25px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: white;
+    transition: 0.5s ease;
+}
+
+.main-right button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.main-right img {
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 20px;
+    padding: 30px 7.5vw;
+}
+
+.container-left {
+    width: 70%;
+    height: auto;
+    padding: 30px 2vw;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px red;
+}
+
+.display {
+    width: 800px;
+    height: 450px;
+    border-radius: 15px;
+    margin: 0 auto;
+    background-color: blue;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.selector {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    gap: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.selector ul {
+    height: auto;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.container-left hr {
+    width: 100%;
+    margin-top: 0;
+    border: solid 1px black;
+}
+
+.description {
+    padding: 20px 0;
+    line-height: 1.8;
+    color: #333;
+}
+
+.description h2 {
+    font-family: 'Bayon', sans-serif;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.description h2::before {
+    display: inline-block;
+    width: 6px;
+    height: 30px;
+    background-color: var(--button-color, #007bff);
+    border-radius: 10px;
+}
+
+.description p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.description ul {
+    list-style: none;
+    padding-left: 5px;
+    margin-bottom: 25px;
+}
+
+.description ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.description ul li::before {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--button-color, #28a745);
+    font-size: 1.1rem;
+}
+
+.description ul li strong {
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.teacher {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    border: 1px solid #eee;
+}
+
+.description h2 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--button-color, #007bff);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.teacher p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.teacher-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.teacher-profile img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--button-color, #007bff);
+}
+
+.profile-about {
+    flex-grow: 1;
+}
+
+.profile-about h4 {
+    font-family: 'Bayon', sans-serif;
+    margin: 0;
+    color: #222;
+}
+
+.profile-about p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+.teacher-profile button {
+    height: 40px;
+    padding: 0px 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 16px;
+    color: white;
+    border: none;
+    background-color: var(--button-color);
+}
+
+.teacher-profile button:hover {
+    background-color: var(--button-hover-color);
+}

@@ -1,23 +1,22 @@
-document.getElementById("visaCARD").style.display = "block";
-document.getElementById("acledaKHQR").style.display = "none";
+$("#visaCARD").show();
+$("#acledaKHQR").hide();
 
 function visaMethod() {
-  document.getElementById("visaCARD").style.display = "block";
-  document.getElementById("acledaKHQR").style.display = "none";
-  document.getElementById("acleda").style.backgroundColor = "lightgray";
-  document.getElementById("acleda").style.color = "var(--button-color)";
-  document.getElementById("visa").style.backgroundColor = "var(--button-color)";
-  document.getElementById("visa").style.color = "white";
+  $("#visaCARD").show();
+  $("#acledaKHQR").hide();
+  $("#acleda").css("background-color", "lightgray");
+  $("#acleda").css("color", "var(--button-color)");
+  $("#visa").css("background-color", "var(--button-color)");
+  $("#visa").css("color", "white");
 }
 
 function acledaMethod() {
-  document.getElementById("visaCARD").style.display = "none";
-  document.getElementById("acledaKHQR").style.display = "block";
-  document.getElementById("visa").style.backgroundColor = "lightgray";
-  document.getElementById("visa").style.color = "var(--button-color)";
-  document.getElementById("acleda").style.backgroundColor =
-    "var(--button-color)";
-  document.getElementById("acleda").style.color = "white";
+  $("#visaCARD").hide();
+  $("#acledaKHQR").show();
+  $("#visa").css("background-color", "lightgray");
+  $("#visa").css("color", "var(--button-color)");
+  $("#acleda").css("background-color", "var(--button-color)");
+  $("#acleda").css("color", "white");
 }
 
 let courseData = [
@@ -59,7 +58,7 @@ for (let i in courseData) {
     <hr id="line${course.courseID}">
   `;
 
-  document.getElementById("ordered-course").innerHTML += courseDisplay;
+  $("#ordered-course").append(courseDisplay);
 }
 
 for (let i in courseData) {
@@ -75,8 +74,7 @@ for (let i in courseData) {
       <button id="addBtn${course.courseID}"><i class="fa-solid fa-plus"></i></button>
     </div>
   `;
-
-  document.getElementById("add-order").innerHTML += addCourse;
+  $("#add-order").append(addCourse);
 }
 
 $("#course1, #course2, #course3").show();
