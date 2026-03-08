@@ -33,7 +33,7 @@ body {
     align-self: flex-start;
 }
 
-.placed-order{
+.placed-order {
     width: 60%;
     height: auto;
     padding: 5px 1.5vw;
@@ -43,12 +43,12 @@ body {
     gap: 20px;
 }
 
-.placed-order hr{
+.placed-order hr {
     width: 100%;
     border: solid 1px orangered;
 }
 
-.placed-title{
+.placed-title {
     width: 100%;
     height: auto;
     display: flex;
@@ -57,12 +57,12 @@ body {
 }
 
 .placed-title h3,
-.placed-title h4{
+.placed-title h4 {
     font-family: 'Inter', Arial;
     font-weight: 600;
 }
 
-.add-order{
+.add-order {
     width: 39%;
     background-color: white;
     border-radius: 0px;
@@ -73,7 +73,7 @@ body {
     padding-bottom: 20px;
 }
 
-.add-order h3{
+.add-order h3 {
     font-weight: 600;
     font-family: 'Inter';
     margin-top: 10px;
@@ -81,19 +81,19 @@ body {
 }
 
 .add-order label del,
-.add-order label span{
+.add-order label span {
     font-family: 'Inter', Arial;
 }
 
-.add-order label del{
+.add-order label del {
     color: var(--text-disabled);
 }
 
-.add-order label span{
+.add-order label span {
     color: var(--price-color);
 }
 
-.course-add{
+.course-add {
     width: 100%;
     height: auto;
     display: flex;
@@ -105,25 +105,25 @@ body {
     border-bottom: solid 1px #bbb;
 }
 
-.course-add img{
+.course-add img {
     width: 40px;
     border-radius: 4px;
     float: left;
 }
 
-.course-add-price{
+.course-add-price {
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
 .course-add-price h4,
-.course-add-price label{
+.course-add-price label {
     line-height: 1;
     margin: 0;
 }
 
-.course-add button{
+.course-add button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -139,7 +139,7 @@ body {
 }
 
 
-.ordered-course{
+.ordered-course {
     width: 100%;
     height: auto;
 }
@@ -154,17 +154,17 @@ body {
     gap: 15px;
 }
 
-.course img{
+.course img {
     width: 60px;
     border-radius: 5px;
 }
 
-.ordered-course hr{
+.ordered-course hr {
     width: 100%;
     border: solid 1px #bbb;
 }
 
-.price{
+.price {
     height: auto;
     display: flex;
     flex-direction: column;
@@ -173,11 +173,11 @@ body {
 }
 
 .price label,
-.price del{
+.price del {
     font-family: 'Inter', Arial;
 }
 
-.course button{
+.course button {
     width: 30px;
     height: 30px;
     display: flex;
@@ -192,7 +192,7 @@ body {
     cursor: pointer;
 }
 
-.cost{
+.cost {
     width: 100%;
     height: auto;
     display: flex;
@@ -201,7 +201,7 @@ body {
 }
 
 .cost label,
-.cost h3{
+.cost h3 {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -210,27 +210,28 @@ body {
 }
 
 .cost label span,
-.placed-order h3 span{
+.placed-order h3 span {
     font-family: 'Inter';
 }
 
 #cost-subtotal,
-#cost-fee{
+#cost-fee {
     color: var(--text-disabled);
 }
 
-#cost-discount{
+#cost-discount {
     color: var(--price-color);
 }
 
 .cost h3,
-.cost h3 span{
+.cost h3 span {
     font-weight: 600;
 }
 
-.cost h3 span{
+.cost h3 span {
     color: orangered;
 }
+
 .container-right {
     width: 28%;
     height: auto;
@@ -251,7 +252,7 @@ body {
     border: solid 1px red;
 }
 
-.payment h3{
+.payment h3 {
     font-family: 'Inter', Arial;
 }
 
@@ -412,4 +413,3 @@ body {
 #submitCardBtn:hover {
     background-color: var(--button-hover-color);
 }
-

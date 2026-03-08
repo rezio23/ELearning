@@ -195,68 +195,26 @@ for (let i in data) {
     </div>
     `;
 
-    $("#course-item").append(lessonItem);
+  $("#course-item").append(lessonItem);
 }
 
-let check = $('input[name="checkBox"]');
+$('input[name="checkBox"]').on("change", function () {
 
-check.forEach((checked) => {
-  checked.addEventListener("change", () => {
-    check.forEach((cb) => {
-      if (cb !== checked) cb.checked = false;
-    });
+  const checkedValue = $(this).val();
+  $('input[name="checkBox"]').not(this).prop('checked', false);
 
-    if (checked.value == "all") {
-      $(
-        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
-      ).show();
-    } else if (checked.value == "math") {
-      $('[data-category="Math"]').show();
-      $(
-        '[data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
-      ).hide();
-    } else if (checked.value == "physic") {
-      $('[data-category="Physic"]').show();
-      $(
-        '[data-category="Math"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
-      ).hide();
-    } else if (checked.value == "business") {
-      $('[data-category="Business"]').show();
-      $(
-        '[data-category="Math"], [data-category="Physic"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
-      ).hide();
-    } else if (checked.value == "general") {
-      $('[data-category="General"]').show();
-      $(
-        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
-      ).hide();
-    } else if (checked.value == "health") {
-      $('[data-category="Health"]').show();
-      $(
-        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Design"], [data-category="Science"]',
-      ).hide();
-    } else if (checked.value == "design") {
-      $('[data-category="Design"]').show();
-      $(
-        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Science"]',
-      ).hide();
-    } else if (checked.value == "science") {
-      $('[data-category="Science"]').show();
-      $(
-        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"]',
-      ).hide();
-    } else {
-      $(
-        '[data-category="Math"], [data-category="Physic"], [data-category="Business"], [data-category="General"], [data-category="Health"], [data-category="Design"], [data-category="Science"]',
-      ).show();
-    }
-  });
+  if (!$(this).prop('checked') || checkedValue === "all") {
+    $('.lesson').show();
+  } else {
+    $('.lesson').hide();
+    const categoryClass = checkedValue.charAt(0).toUpperCase() + checkedValue.slice(1);
+    $(`.lesson[data-category="${categoryClass}"]`).show();
+  }
 });
 
 $("#course1, #course2, #course3").show();
 $("#course4, #course5, #course6, #course7, #course8, #course9").hide();
 
-// function ShowAllCourse() {$("#course1, #course2, #course3, #course4, #course5, #course6, #course7, #course8, #course9").show();}
 const ShowAllCourse = () => {
   $(
     "#course1, #course2, #course3, #course4, #course5, #course6, #course7, #course8, #course9",

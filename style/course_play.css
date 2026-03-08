@@ -26,7 +26,9 @@ body {
     padding: 20px 7.5vw;
     align-items: center;
     justify-content: space-between;
-    background-color: wheat;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
 }
 
 .main-left {
@@ -189,7 +191,6 @@ body {
 
 .description ul li strong {
     color: #000;
-    font-weight: 600;
     display: block;
     margin-bottom: 2px;
 }
@@ -262,4 +263,138 @@ body {
 
 .teacher-profile button:hover {
     background-color: var(--button-hover-color);
+}
+
+.container-right {
+    width: 30%;
+    height: auto;
+    padding: 0;
+    align-self: flex-start;
+    background-color: #f8fafc;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: sticky;
+    top: 130px;
+}
+
+.course-content {
+    width: 100%;
+    height: auto;
+}
+
+.course-content h3 {
+    width: 100%;
+    height: 80px;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--sky-background-color, #f0f7ff);
+    padding: 0 20px;
+    font-family: 'Bayon', sans-serif;
+    font-size: 1.4rem;
+    color: var(--header-footer);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.03);
+}
+
+.course-content h3 span {
+    font-size: 0.9rem;
+    background: white;
+    padding: 4px 12px;
+    border-radius: 5px;
+    color: var(--button-color);
+    font-weight: 600;
+}
+
+.module-box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.module-box:last-child {
+    border-bottom: none;
+}
+
+.module-box label {
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    font-family: 'Bayon', sans-serif;
+    font-size: 1.1rem;
+    color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.module-box label:hover {
+    background-color: #fcfcfc;
+}
+
+.module-box label span {
+    color: var(--button-color);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.module-lesson {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+.module-lesson button {
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 0.95rem;
+    color: #555;
+    cursor: pointer;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    background: transparent;
+    text-align: left;
+    transition: all 0.3s ease;
+    gap: 15px;
+}
+
+.module-lesson button:last-child {
+    border-bottom: none;
+}
+
+.module-lesson button:hover {
+    background-color: white;
+    color: var(--button-color);
+    padding-left: 25px;
+    box-shadow: inset 4px 0 0 var(--button-color);
+}
+
+.module-lesson button span {
+    font-size: 0.8rem;
+    color: #999;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.module-lesson button.active {
+    background-color: var(--sky-background-color);
+    color: var(--button-color);
+    font-weight: 600;
+    box-shadow: inset 4px 0 0 var(--button-color);
 }
