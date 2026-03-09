@@ -120,6 +120,7 @@ body {
     gap: 30px;
 }
 
+
 .teacher,
 .curriculum,
 .payment,
@@ -194,7 +195,7 @@ body {
 
 .curriculum-description label button {
     width: 35%;
-    height: 40px;
+    height: 37px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,19 +206,20 @@ body {
     font-size: 12px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
+    width: 100%;
+    height: 100%;
 }
 
 .teacher button,
 .curriculum button,
 #submitCardBtn {
     width: 100%;
-    height: 40px;
+    height: var(--button-height);
     border-radius: 5px;
     color: var(--white);
     background-color: var(--button-color);
-    border: none;
-    transition: 0.5s ease;
 }
 
 .curriculum button a {
@@ -225,6 +227,8 @@ body {
     gap: 4px;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .teacher button:hover,
@@ -256,16 +260,13 @@ body {
 
 .payment-method button {
     width: 48%;
-    height: 40px;
+    height: var(--button-height);
     border-radius: 5px;
-    border: none;
     background-color: var(--button-color);
     color: var(--white);
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    transition: 0.5s ease;
-    cursor: pointer;
 }
 
 #acleda {
@@ -310,7 +311,8 @@ body {
 }
 
 .visa-payment input {
-    padding: 14px 20px;
+    padding: 0 20px;
+    height: var(--button-height);
     border-radius: 5px;
     border: none;
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
@@ -336,7 +338,8 @@ body {
 
 .visa-address input {
     width: 100%;
-    padding: 14px 20px;
+    padding: 0 20px;
+    height: var(--button-height);
     border-radius: 5px;
     border: none;
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
@@ -347,10 +350,14 @@ body {
 .select-country {
     width: 100%;
     background: var(--white);
-    padding: 10px 20px;
+    padding: 0 20px;
+    height: var(--button-height);
     border-radius: 5px;
     color: var(--text-gray);
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .select-country label {

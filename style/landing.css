@@ -110,21 +110,15 @@ section {
 
 .course-title button {
     width: 120px;
-    height: 40px;
+    height: var(--button-height);
     background-color: var(--button-color);
     color: var(--white);
-    border: none;
     border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: 0.5s ease;
     font-weight: 600;
-    padding: 0 14px;
-    box-shadow: 0 8px 20px rgba(34, 34, 34, 0.06);
 }
 
 .course-title button:hover {
     background-color: var(--button-hover-color);
-    transform: translateY(-3px);
 }
 
 /* Course Item Container */
@@ -153,20 +147,27 @@ section {
 .course-item-card button {
     width: 100%;
     margin-top: 15px;
-    height: 40px;
+    height: var(--button-height);
     border-radius: 5px;
-    border: none;
     color: var(--white);
     background-color: var(--button-color);
-    transition: 0.5s ease;
 }
 
 .course-item-card button:hover {
     background-color: var(--button-hover-color);
 }
 
+.course-item-card button a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .course-item-card {
-    /* Original Block 2 - Overrides Block 1 where applicable */
     width: 24%;
     max-width: 100%;
     background: var(--background-color);
@@ -313,18 +314,13 @@ section {
 .course-part button,
 .teacher-part button {
     width: 50px;
-    height: 40px;
+    height: var(--button-height);
     border-radius: var(--border-radius);
-    border: none;
     background-color: var(--button-secondary-bg);
-    margin-left: 0;
-    transition: 0.5s ease;
-    box-shadow: 0 6px 14px var(--border-light);
 }
 
 .course-part button:hover,
 .teacher-part button:hover {
-    transform: translateY(-2px);
     background-color: var(--button-hover-color);
     color: var(--text-white);
 }
@@ -376,20 +372,15 @@ section {
 
 .category-title button {
     width: 240px;
-    height: 40px;
+    height: var(--button-height);
     background-color: var(--button-color);
     color: var(--text-white);
-    border: none;
     border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: 0.5s ease;
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(34, 34, 34, 0.06);
 }
 
 .category-title button:hover {
     background-color: var(--button-hover-color);
-    transform: translateY(-3px);
 }
 
 .category-container {
@@ -595,21 +586,16 @@ section {
 
 .platform-title button {
     width: 280px;
-    height: 40px;
+    height: var(--button-height);
     margin-top: 30px;
     background-color: var(--button-color);
     color: var(--text-white);
-    border: none;
     border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: 0.5s ease;
     font-weight: 600;
-    box-shadow: 0 8px 20px rgba(34, 34, 34, 0.06);
 }
 
 .platform-title button:hover {
     background-color: var(--button-hover-color);
-    transform: translateY(-3px);
 }
 
 .platform-image {
@@ -751,17 +737,13 @@ section {
 }
 
 .tag-button button {
-    height: 40px;
+    height: var(--button-height);
     padding: 0 50px;
     border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    transition: 0.5s ease;
 }
 
 #tag-community {
     background-color: blue;
-    box-shadow: 0 0 15px blue;
 }
 
 #tag-community:hover {
@@ -778,11 +760,15 @@ section {
 .tag-button button a {
     color: var(--white);
     font-weight: 600;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #tag-learnMore {
     background-color: var(--overlay-glass);
-    color: #222;
 }
 
 #tag-learnMore a {

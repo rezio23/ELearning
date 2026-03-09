@@ -44,7 +44,6 @@
             </div>
             <ul>
                 <li><a href="../index.html">ទំព័រដើម</a></li>
-                <li><a href="#">ទំព័រ</a></li>
                 <li><a href="allcourse.html">វគ្គសិក្សា</a></li>
                 <li><a href="#">ប្លុក</a></li>
                 <li><a href="studyoncampuss.html">ទំនាក់ទំនង</a></li>
@@ -71,15 +70,15 @@
                         Friendship
                         Blvd., Phum Anlong Kngan, Sangkat Khmuonh, Khan Saensokh, Phnom Penh, Kingdom of
                         Cambodia.</a></label>
-                <label for="phone"><a href="#"><i class="fa-solid fa-phone"></i>+855 112 223 33</a></label>
+                <label for="phone"><a href="#"><i class="fa-solid fa-phone"></i>+855 12 233 344</a></label>
             </div>
-            <h2>ផ្ញើសារដោយផ្ទាល់</h2>
-            <div class="message">
+            <h2 id="messageTitle"">ផ្ញើសារដោយផ្ទាល់</h2>
+            <div class=" message">
                 <form class="contact-form">
                     <div class="form-row">
                         <div class="input-field">
                             <label>ឈ្មោះ</label>
-                            <input type="text" placeholder="វិឈាន សម្បត្តិ">
+                            <input type="text" id="nameInput" placeholder="វិឈាន សម្បត្តិ">
                         </div>
                         <div class="input-field">
                             <label>អ៊ីម៉ែល</label>
@@ -89,51 +88,51 @@
 
                     <div class="input-field full-width">
                         <label>ប្រធានបទ</label>
-                        <input type="text" placeholder="គណិតវិទ្យា">
+                        <input type="text" id="subjectInput" placeholder="គណិតវិទ្យា">
                     </div>
 
                     <div class="input-field full-width">
                         <label>សារ</label>
-                        <textarea placeholder="សារ..."></textarea>
+                        <textarea id="messageInput" placeholder="សារ..."></textarea>
                     </div>
 
                     <div class="form-footer">
                         <button type="submit" class="submit-btn">ផ្ញើសារ</button>
                     </div>
                 </form>
-            </div>
         </div>
+    </div>
 
-        <div class="container-right">
-            <h2>ទីតាំងសម្រាប់ព័ត៌មានបន្ថែម</h2>
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.92041633274!2d104.85701030000001!3d11.629021199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109527b5a6c6599%3A0x947e61c3ff00c21d!2sACLEDA%20Institute%20of%20Business!5e0!3m2!1skm!2skh!4v1773022505005!5m2!1skm!2skh"
-                    width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="register">
-                <h2>សហគមន៍</h2>
-                <div class="register-card">
-                    <div class="tag">
-                        <p>ក្លាយខ្លួនទៅជាសិស្សដ៏ល្អ!</p>
-                    </div>
-                    <h1>ពង្រឹង<span>ការសិក្សា</span>របស់អ្នកជាមួយយើង</h1>
-                    <p>ចូលរួមជាមួយសហគមន៍អ្នកបង្រៀនអំពី +50,000 នាក់។ យើងផ្ដល់ឧបករណ៍ សំរាប់ជំនួយ និងការចូលដល់ជំរុញសកល
-                        ដើម្បីជួយអ្នកបង្កើតអាជីវកម្មបង្រៀនអនឡាញដែលចំណេញ។</p>
-                    <div class="tag-button">
-                        <button id="tag-community"><a href="https://t.me/sombath12examfiles">
-                                សហគមន៍
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a></button>
-                        <button id="tag-learnMore">
-                            <a href="#">
-                                បន្ថែម
-                            </a>
-                        </button>
-                    </div>
+    <div class="container-right">
+        <h2 id="locationTitle">ទីតាំងសម្រាប់ព័ត៌មានបន្ថែម</h2>
+        <div class="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.92041633274!2d104.85701030000001!3d11.629021199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3109527b5a6c6599%3A0x947e61c3ff00c21d!2sACLEDA%20Institute%20of%20Business!5e0!3m2!1skm!2skh!4v1773022505005!5m2!1skm!2skh"
+                width="100%" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="register">
+            <h2>សហគមន៍</h2>
+            <div class="register-card">
+                <div class="tag">
+                    <p>ក្លាយខ្លួនទៅជាសិស្សដ៏ល្អ!</p>
+                </div>
+                <h1>ពង្រឹង<span>ការសិក្សា</span>របស់អ្នកជាមួយយើង</h1>
+                <p>ចូលរួមជាមួយសហគមន៍សិក្សាដែលមានសមាជិកប្រមាន +5,000 នាក់។ យើងមានជាមេរៀនជំនួយ ក្រុមពិភាក្សា
+                    លំហាត់ស្រាវជ្រាវ​ ចំណេះដឹងទូទៅ និងបទពិសោធន៍​ជាច្រើនសម្រាប់ចែករំលែក។</p>
+                <div class="tag-button">
+                    <button id="tag-community"><a href="https://t.me/sombath12examfiles">
+                            សហគមន៍
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a></button>
+                    <button id="tag-learnMore">
+                        <a href="#">
+                            បន្ថែម
+                        </a>
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     <!-- Footer -->
     <footer>
@@ -147,6 +146,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../jquery.js"></script>
 <script src="../script/main.js"></script>
+<script src="../script/config.js"></script>
 <script src="../script/studyoncampus.js"></script>
 
 </html>

@@ -6,12 +6,12 @@ let data = {
     lessonDuration: "32",
     lessonCategoryENG: "Math",
     lessonCategoryKH: "គណិតវិទ្យា",
-    lessonTitle: "គណិតវិទ្យា - ធរណីមាត្រ",
+    lessonTitle: "គណិតវិទ្យា",
     lessonTeacherProfile: "../asset/author/mainpfp.jpg",
     lessonTeacherName: "វិឈាន សម្បត្តិ",
     lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
     lessonTaught: "៥០",
-    lessonOldPrice: 19.99,
+    lessonOldPrice: 49.99,
     lessonNewPrice: "Free",
   },
   lesson2: {
@@ -22,8 +22,8 @@ let data = {
     lessonCategoryENG: "Science",
     lessonCategoryKH: "បច្ចេកវិទ្យា",
     lessonTitle: "កាឡាក់ស៊ីមីលគីវ៉េ",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
+    lessonTeacherProfile: "../asset/author/main2.jpg",
+    lessonTeacherName: "អ៊ុក សុបញ្ញា",
     lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
     lessonTaught: "៥០",
     lessonOldPrice: 99.99,
@@ -37,9 +37,9 @@ let data = {
     lessonCategoryENG: "Health",
     lessonCategoryKH: "សុខភាព",
     lessonTitle: "សុខភាពបេះដូង",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
-    lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    lessonTeacherProfile: "../asset/author/main3.jpg",
+    lessonTeacherName: "Dr. John",
+    lessonTeacherDegree: "វិជ្ជបណ្ឌិត",
     lessonTaught: "៥០",
     lessonOldPrice: 99.99,
     lessonNewPrice: "Free",
@@ -52,9 +52,9 @@ let data = {
     lessonCategoryENG: "General",
     lessonCategoryKH: "ចំណេះដឹងទូទៅ",
     lessonTitle: "ទម្លាប់ទាំង៧",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
-    lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    lessonTeacherProfile: "../asset/author/main4.jpg",
+    lessonTeacherName: "Ms. Alice",
+    lessonTeacherDegree: "បណ្ឌិត ចិត្តសាស្ត្រ",
     lessonTaught: "៩៧",
     lessonOldPrice: 79.99,
     lessonNewPrice: "9.99",
@@ -67,9 +67,9 @@ let data = {
     lessonCategoryENG: "Business",
     lessonCategoryKH: "ជំនួញ",
     lessonTitle: "មូលដ្ឋានគ្រឹះក្នុងការបង្កើតជំនួញ",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
-    lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    lessonTeacherProfile: "../asset/author/main5.jpg",
+    lessonTeacherName: "សែន ពិសី",
+    lessonTeacherDegree: "បរិញ្ញាបត្រ ពាណិជ្ជកម្មអន្តរជាតិ",
     lessonTaught: "៩៧",
     lessonOldPrice: 79.99,
     lessonNewPrice: "Free",
@@ -81,9 +81,9 @@ let data = {
     lessonCategoryENG: "Physic",
     lessonCategoryKH: "រូបវិទ្យា",
     lessonTitle: "កង់ទិចរូបវិទ្យា",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
-    lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    lessonTeacherProfile: "../asset/author/main6.jpg",
+    lessonTeacherName: "សាន សុជាតា",
+    lessonTeacherDegree: "អនុបណ្ឌិត រូបវិទ្យា",
     lessonTaught: "៩៧",
     lessonOldPrice: 79.99,
     lessonNewPrice: "Free",
@@ -96,9 +96,9 @@ let data = {
     lessonCategoryENG: "General",
     lessonCategoryKH: "ចំណេះដឹងទូទៅ",
     lessonTitle: "ទម្លាប់អាតូមិក",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
-    lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    lessonTeacherProfile: "../asset/author/main7.jpg",
+    lessonTeacherName: "មិញ ផាលាភ",
+    lessonTeacherDegree: "បណ្ឌិត ទស្សនវិជ្ជា",
     lessonTaught: "៩៧",
     lessonOldPrice: 79.99,
     lessonNewPrice: "Free",
@@ -111,9 +111,9 @@ let data = {
     lessonCategoryENG: "Design",
     lessonCategoryKH: "រចនារូបភាព",
     lessonTitle: "រចនារូបភាព3D",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
-    lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    lessonTeacherProfile: "../asset/author/main8.jpg",
+    lessonTeacherName: "ចាន់ ដារ៉ា",
+    lessonTeacherDegree: "បរិញ្ញាបត្រ ស្ថាបត្យកម្ម",
     lessonTaught: "៩៧",
     lessonOldPrice: 79.99,
     lessonNewPrice: "Free",
@@ -126,9 +126,9 @@ let data = {
     lessonCategoryENG: "Science",
     lessonCategoryKH: "បច្ចេកវិទ្យា",
     lessonTitle: "បញ្ញាសប្បនិម្មិត",
-    lessonTeacherProfile: "../asset/author/mainpfp.jpg",
-    lessonTeacherName: "វិឈាន សម្បត្តិ",
-    lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
+    lessonTeacherProfile: "../asset/author/main9.jpg",
+    lessonTeacherName: "AI Expert",
+    lessonTeacherDegree: "បណ្ឌិត វិទ្យាសាស្ត្រទិន្នន័យ",
     lessonTaught: "៩៧",
     lessonOldPrice: 79.99,
     lessonNewPrice: "Free",
@@ -226,6 +226,7 @@ for (let i in data) {
   $("#course-item").append(lessonItem);
 }
 
+
 $('input[name="checkBox"]').on("change", function () {
   const checkedValue = $(this).val();
   $('input[name="checkBox"]').not(this).prop("checked", false);
@@ -252,3 +253,21 @@ const ShowAllCourse = () => {
   ).show();
   $("#showAllBtn").hide();
 };
+
+$("#searchCourse").on("keyup", function () {
+
+  let searchValue = $(this).val().toLowerCase().trim();
+
+  $(".lesson").each(function () {
+
+    let title = $(this).data("title").toLowerCase();
+
+    if (title.includes(searchValue)) {
+      $(this).show();
+    } else {
+      $(this).hide();
+    }
+
+  });
+
+});

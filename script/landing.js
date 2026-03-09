@@ -2,7 +2,7 @@ let courseData = [
   {
     courseId: 1,
     courseTitle: "គណិតវិទ្យា - ធរណីមាត្រ",
-    courseAuthor: "Sombath",
+    courseAuthor: "វិឈាន សម្បត្តិ",
     courseImage:
       "https://wallpapers.com/images/featured/physics-w4ac9eqvnunc0ocp.jpg",
     courseAuthorImage: "mainpfp.jpg",
@@ -10,57 +10,57 @@ let courseData = [
   {
     courseId: 2,
     courseTitle: "កាឡាក់ស៊ីមីលគីវ៉េ",
-    courseAuthor: "Uk Sophanha",
+    courseAuthor: "អ៊ុក សុបញ្ញា",
     courseImage:
       "https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=1jJ3N_Ix2nIguRWAof8ppMEpu3Bzvx7Q&itok=WSHuusB5",
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main2.jpg",
   },
   {
     courseId: 3,
     courseTitle: "សុខភាពបេះដូង",
-    courseAuthor: "Hout Sokleng",
+    courseAuthor: "Dr. John",
     courseImage:
       "https://www.drashwanimehta.com/assets/image/blog/tips-from-cardiologist-for-healthy-heart.webp",
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main3.jpg",
   },
   {
     courseId: 4,
     courseTitle: "ទម្លាប់ទាំង៧",
-    courseAuthor: "Sombath",
+    courseAuthor: "Ms. Alice",
     courseImage:
       "https://media.licdn.com/dms/image/v2/D4D12AQHGC4-mftneKw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1683647951916?e=2147483647&v=beta&t=sqbOZkehA39pUJx6ifvxVkEaSB73CDP1t-8JY8BeWKI",
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main4.jpg",
   },
   {
     courseId: 5,
     courseTitle: "មូលដ្ឋានគ្រឹះក្នុងការបង្កើតជំនួញ",
-    courseAuthor: "Uk Sophanha",
+    courseAuthor: "សែន ពិសី",
     courseImage:
       "https://png.pngtree.com/thumb_back/fw800/background/20251126/pngtree-stack-of-self-help-and-business-books-with-glasses-pen-on-image_20619670.webp",
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main5.jpg",
   },
   {
     courseId: 6,
     courseTitle: "កង់ទិចរូបវិទ្យា",
-    courseAuthor: "Hout Sokleng",
+    courseAuthor: "សាន សុជាតា",
     courseImage: "https://cdn.mos.cms.futurecdn.net/ayTnhRypWyGEgi5zod4RAd.jpg",
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main6.jpg",
   },
   {
     courseId: 7,
     courseTitle: "ទម្លាប់អាតូមិក",
-    courseAuthor: "Uk Sophanha",
+    courseAuthor: "មិញ ផាលាភ",
     courseImage:
       "https://m.media-amazon.com/images/S/aplus-media/sota/cdab3996-5d25-4e0c-952b-09d3c4a5635f.__CR0,0,970,600_PT0_SX970_V1___.jpg",
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main7.jpg",
   },
   {
     courseId: 8,
     courseTitle: "រចនារូបភាព3D",
-    courseAuthor: "Hout Sokleng",
+    courseAuthor: "ចាន់ ដារ៉ា",
     courseImage:
       "https://4kwallpapers.com/images/wallpapers/geometric-3d-render-3840x2160-12087.jpg",
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main12.jpg",
   },
 ];
 
@@ -73,12 +73,12 @@ courseData.forEach((course) => {
     <h3>${course.courseTitle}</h3>
     <div class="course-item-card-author">
       <div class="course-profile">
-        <img class="profile-thumb" src="../asset/author/${course.courseAuthorImage}" alt="author">
+        <img class="profile-thumb" src="asset/author/${course.courseAuthorImage}" alt="author">
         <p>${course.courseAuthor}</p>
       </div>
       <h2 class="price"><del>$19.99</del>Free</h2>
     </div>
-    <button><a href="#">មើល</a></button>
+    <button><a href="src/course_details.html">មើល</a></button>
   </div>
   `;
 
@@ -105,6 +105,11 @@ function nextCourse() {
   $("#course5, #course6, #course7, #course8").show();
   $("#nextBtn").text("ត្រឡប់").off("click", nextCourse).on("click", backCourse);
 }
+
+// Initial events
+$("#nextBtn").on("click", nextCourse);
+$("#course-number1").on("click", backCourse);
+$("#course-number2").on("click", nextCourse);
 
 // Category Item Data
 let categories = [
@@ -183,43 +188,43 @@ let teachers = [
     teacherId: 2,
     teacherName: "លោកគ្រូ អ៊ុក សុបញ្ញា",
     teacherState: "បរិញ្ញាបត្រ វិទ្យាសាស្ត្រកុំព្យូទ័រ",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main2.jpg",
   },
   {
     teacherId: 3,
     teacherName: "លោកគ្រូ ចាន់ ដារ៉ា",
     teacherState: "បរិញ្ញាបត្រ គណិតវិទ្យា",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main3.jpg",
   },
   {
     teacherId: 4,
     teacherName: "Mr. John",
     teacherState: "បរិញ្ញាបត្រ វិជ្ជបណ្ឌិត",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main11.jpg",
   },
   {
     teacherId: 5,
     teacherName: "Ms. Alice",
     teacherState: "បណ្ឌិត ចិត្តសាស្ត្រ",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main5.jpg",
   },
   {
     teacherId: 6,
     teacherName: "អ្នកគ្រូ សាន សុជាតា",
     teacherState: "អនុបណ្ឌិត រូបវិទ្យា",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main9.jpg",
   },
   {
     teacherId: 7,
     teacherName: "លោកគ្រូ មិញ ផាលាភ",
     teacherState: "បណ្ឌិត វិទ្យាសាស្ត្រកុំព្យូទ័រ",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main7.jpg",
   },
   {
     teacherId: 8,
     teacherName: "អ្នកគ្រូ សែន ពិសី",
     teacherState: "បរិញ្ញាបត្រ ពាណិជ្ជកម្មអន្តរជាតិ",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main8.jpg",
   },
 ];
 
@@ -256,3 +261,8 @@ function nextTeacher() {
   $("#teacher5, #teacher6, #teacher7, #teacher8").show();
   $("#nextTeacherBtn").text("ត្រឡប់").off("click", nextTeacher).on("click", backTeacher);
 }
+
+// Initial events
+$("#nextTeacherBtn").on("click", nextTeacher);
+$("#teacher-number1").on("click", backTeacher);
+$("#teacher-number2").on("click", nextTeacher);

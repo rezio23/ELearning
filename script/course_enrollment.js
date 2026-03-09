@@ -1,7 +1,10 @@
+let paymentMethod = "visa";
+
 $("#visaCARD").show();
 $("#acledaKHQR").hide();
 
 function visaMethod() {
+  paymentMethod = "visa";
   $("#visaCARD").show();
   $("#acledaKHQR").hide();
   $("#acleda").css("background-color", "lightgray");
@@ -11,6 +14,7 @@ function visaMethod() {
 }
 
 function acledaMethod() {
+  paymentMethod = "acleda";
   $("#visaCARD").hide();
   $("#acledaKHQR").show();
   $("#visa").css("background-color", "lightgray");
@@ -18,6 +22,64 @@ function acledaMethod() {
   $("#acleda").css("background-color", "var(--button-color)");
   $("#acleda").css("color", "white");
 }
+
+$("#submitCardBtn").on("click", function (e) {
+  e.preventDefault();
+
+  if (paymentMethod === "visa") {
+    let cardNumber = $("#cardNumber").val();
+    let expirationDate = $("#expirationDate").val();
+    let securityCode = $("#securityCode").val();
+    let fullName = $("#fullName").val();
+    let address = $("#address").val();
+
+    if (!cardNumber || !expirationDate || !securityCode || !fullName || !address) {
+      Swal.fire({
+        icon: "error",
+        title: "សូមបំពេញព័ត៌មានឱ្យបានគ្រប់គ្រាន់!",
+        text: "រាល់ព័ត៌មានកាត VISA ត្រូវតែបំពេញ។",
+      });
+      return;
+    }
+
+    if (cardNumber.length !== 16) {
+      Swal.fire({
+        icon: "error",
+        title: "លេខកាតមិនត្រឹមត្រូវ!",
+        text: "លេខកាតត្រូវតែមាន ១៦ ខ្ទង់។",
+      });
+      return;
+    }
+
+    if (expirationDate.length !== 4) {
+      Swal.fire({
+        icon: "error",
+        title: "កាលបរិច្ឆេទផុតកំណត់មិនត្រឹមត្រូវ!",
+        text: "កាលបរិច្ឆេទផុតកំណត់ត្រូវតែមាន ៤ ខ្ទង់ (ខែឆ្នាំ)។",
+      });
+      return;
+    }
+
+    if (securityCode.length !== 3) {
+      Swal.fire({
+        icon: "error",
+        title: "លេខកូដសម្ងាត់មិនត្រឹមត្រូវ!",
+        text: "លេខកូដ CVC ត្រូវតែមាន ៣ ខ្ទង់។",
+      });
+      return;
+    }
+  }
+
+  Swal.fire({
+    icon: "success",
+    title: "ការចុះឈ្មោះជោគជ័យ!",
+    text: "សាកល្បងរៀនឥឡូវនេះ",
+    timer: 2000,
+    showConfirmButton: false,
+  }).then(() => {
+    window.location.href = "course_play.html";
+  });
+});
 
 let courseData = [
   {

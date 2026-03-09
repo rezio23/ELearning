@@ -44,7 +44,6 @@
             </div>
             <ul>
                 <li><a href="../index.html">ទំព័រដើម</a></li>
-                <li><a href="#">ទំព័រ</a></li>
                 <li><a href="allcourse.html">វគ្គសិក្សា</a></li>
                 <li><a href="#">ប្លុក</a></li>
                 <li><a href="studyoncampuss.html">ទំនាក់ទំនង</a></li>
@@ -72,7 +71,7 @@
                     id="course-name">តក្កវិទ្យា</span></label>
         </div>
         <div class="main-right">
-            <button><a href="#">មេរៀនបន្ទាប់</a></button>
+            <button id="nextLesson"><a href="#">មេរៀនបន្ទាប់</a></button>
             <img src="../asset/author/mainpfp.jpg" alt="profile">
         </div>
     </div>
@@ -80,7 +79,11 @@
     <div class="container">
         <div class="container-left">
             <div class="display">
-                <img src="../asset/image/math.jpg" alt="display" style="height: 100%;">
+                <!-- <iframe width="800" height="450" src="https://www.youtube.com/embed/fnBoRFRDgsk"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe> -->
             </div>
             <div class="selector">
                 <ul>
@@ -144,49 +147,41 @@
 
         <div class="container-right">
             <div class="course-content">
-                <h3>ជំពូកមេរៀន <span>៤​ មេរៀន</span></h3>
+                <h3>ជំពូកមេរៀន <span>៦​ មេរៀន</span></h3>
                 <div class="moudle">
                     <div class="module1 module-box">
                         <label for="module1">ជំពូកទី ១ <span id="lesson-container1"><i
                                     class="fa-solid fa-angle-up"></i></span></label>
                         <div class="module1-lesson module-lesson">
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
+                            <button id="basicMath">
+                                ១. មូលដ្ខានគណិតវិទ្យា
+                                <span>៣០នាទី</span>
                             </button>
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
+                            <button id="degMath">
+                                ២. ទ្រឹស្ដីបទមុំ និងបន្ទាត់
+                                <span>២២នាទី</span>
                             </button>
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
+                            <button id="pluralMath">
+                                ៣. លក្ខណៈនៃពហុកោណ
+                                <span>៣៣នាទី</span>
                             </button>
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
+                            <button id="circleMath">
+                                ៤. រង្វង់ និងអង្កត់ធ្នូ
+                                <span>១៤នាទី</span>
                             </button>
                         </div>
                     </div>
                     <div class="module2 module-box">
-                        <label for="module1">ជំពូកទី ១ <span id="lesson-container2"><i
+                        <label for="module1">ជំពូកទី ២ <span id="lesson-container2"><i
                                     class="fa-solid fa-angle-up"></i></span></label>
                         <div class="module2-lesson module-lesson">
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
+                            <button id="areaMath">
+                                ១. ការគណនាផ្ទៃក្រឡា និងបរិមាត្រ
+                                <span>២៥នាទី</span>
                             </button>
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
-                            </button>
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
-                            </button>
-                            <button>
-                                ១. អំពីគណិតវិទ្យា
-                                <span>៥នាទី</span>
+                            <button id="3dMath">
+                                ២. ធរណីមាត្រក្នុងលំហ
+                                <span>៤២នាទី</span>
                             </button>
                         </div>
                     </div>
@@ -203,7 +198,7 @@
         <div class="footer-Item">
             <div class="footerProfile footerItem">
                 <div class="logo">
-                    <a href="#">ចក្រា</a>
+                    <a href="../index.html">ចក្រា</a>
                 </div>
                 <p>Redefining online education through high-quality, expert-led content that
                     helps you stay ahead in the ever-changing professional landscape.
