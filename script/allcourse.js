@@ -57,7 +57,7 @@ let data = {
     lessonTeacherDegree: "វិទ្យាសាស្ត្រកុំព្យូទ័រ",
     lessonTaught: "៩៧",
     lessonOldPrice: 79.99,
-    lessonNewPrice: "Free",
+    lessonNewPrice: "9.99",
   },
   lesson5: {
     lessonID: "course5",
@@ -164,9 +164,37 @@ for (let i in data) {
     textColor = "#A64444";
   }
 
+  let priceColor = "";
+
+  if (lesson.lessonNewPrice == "Free") {
+    priceColor = "var(--price-color)";
+  } else {
+    priceColor = "red";
+  }
+
+  let totalLessons = Object.keys(data).length;
+  let freeLessons = Object.values(data).filter(lesson => lesson.lessonNewPrice === "Free").length;
+  let mathLessons = Object.values(data).filter(lesson => lesson.lessonCategoryENG === "Math").length;
+  let scienceLessons = Object.values(data).filter(lesson => lesson.lessonCategoryENG === "Science").length;
+  let healthLessons = Object.values(data).filter(lesson => lesson.lessonCategoryENG === "Health").length;
+  let generalLessons = Object.values(data).filter(lesson => lesson.lessonCategoryENG === "General").length;
+  let physicLessons = Object.values(data).filter(lesson => lesson.lessonCategoryENG === "Physic").length;
+  let designLessons = Object.values(data).filter(lesson => lesson.lessonCategoryENG === "Design").length;
+  let businessLessons = Object.values(data).filter(lesson => lesson.lessonCategoryENG === "Business").length;
+
+  $("#count-all").text(`${totalLessons} មេរៀន`)
+  $("#count-free").text(`${freeLessons} មេរៀន`)
+  $("#count-math").text(`${mathLessons} មេរៀន`)
+  $("#count-science").text(`${scienceLessons} មេរៀន`)
+  $("#count-health").text(`${healthLessons} មេរៀន`)
+  $("#count-general").text(`${generalLessons} មេរៀន`)
+  $("#count-physic").text(`${physicLessons} មេរៀន`)
+  $("#count-design").text(`${designLessons} មេរៀន`)
+  $("#count-business").text(`${businessLessons} មេរៀន`)
+
   let lessonItem = `
         
-        <div class="lesson" id="${lesson.lessonID}" data-category="${lesson.lessonCategoryENG}">
+        <div class="lesson" id="${lesson.lessonID}" data-category="${lesson.lessonCategoryENG}" data-price="${lesson.lessonNewPrice}">
         <img src="${lesson.lessonIMG}" alt="imageCourse">
         <div class="lessonType">
             <label for="lessonMain"><i class="fa-regular fa-circle-play"></i> ${lesson.lessonDuration} នាទី</label>
@@ -183,13 +211,13 @@ for (let i in data) {
                 <h3>${lesson.lessonTeacherName}</h3>
                     <label for="major">${lesson.lessonTeacherDegree}</label>
             </div>
-            <label for="taughtStudent"><span>${lesson.lessonTaught}+</span> នាក់</label>
+            <label for="taughtStudent"><span >${lesson.lessonTaught}+</span> នាក់</label>
 
         </div>
         <hr>
         <div class="lesson-Price">
             <label for="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label>
-            <label for="price"><del>${lesson.lessonOldPrice}$</del> ${lesson.lessonNewPrice}</label>
+            <label style="color: ${priceColor}" for="price"><del>${lesson.lessonOldPrice}$</del> ${lesson.lessonNewPrice}</label>
         </div>
         <button><a href="course_details.html" target="_blank">ដាក់ចូលកន្ត្រក</a></button>
     </div>
@@ -199,15 +227,18 @@ for (let i in data) {
 }
 
 $('input[name="checkBox"]').on("change", function () {
-
   const checkedValue = $(this).val();
-  $('input[name="checkBox"]').not(this).prop('checked', false);
+  $('input[name="checkBox"]').not(this).prop("checked", false);
 
-  if (!$(this).prop('checked') || checkedValue === "all") {
-    $('.lesson').show();
+  if (!$(this).prop("checked") || checkedValue === "all") {
+    $(".lesson").show();
+  } else if (checkedValue === "free") {
+    $(".lesson").hide();
+    $('.lesson[data-price="Free"]').show();
   } else {
-    $('.lesson').hide();
-    const categoryClass = checkedValue.charAt(0).toUpperCase() + checkedValue.slice(1);
+    $(".lesson").hide();
+    const categoryClass =
+      checkedValue.charAt(0).toUpperCase() + checkedValue.slice(1);
     $(`.lesson[data-category="${categoryClass}"]`).show();
   }
 });
@@ -219,4 +250,5 @@ const ShowAllCourse = () => {
   $(
     "#course1, #course2, #course3, #course4, #course5, #course6, #course7, #course8, #course9",
   ).show();
+  $("#showAllBtn").hide();
 };

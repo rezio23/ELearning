@@ -1,11 +1,9 @@
-/* Constrain wide sections for better readability */
-:root {
-    --max-content-width: 1200px;
-}
+@import url('variables.css');
+
 
 /* Global improvements: typography and base layout */
 body {
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--text-main);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -34,7 +32,7 @@ body {
     width: 70%;
     height: auto;
     padding: 25px 25px;
-    border: solid 1px red;
+    border: solid 1px var(--border-red);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,7 +130,7 @@ body {
     flex-direction: column;
     padding: 15px 15px;
     gap: 10px;
-    border: solid 1px red;
+    border: solid 1px var(--border-red);
 }
 
 .teacher hr,
@@ -140,7 +138,7 @@ body {
 .payment hr,
 .rating hr {
     width: 100%;
-    border: solid 1px rgba(0, 0, 0, 0.075);
+    border: solid 1px var(--border-very-subtle);
 }
 
 .teacher-profile {
@@ -181,26 +179,26 @@ body {
 }
 
 #price label span {
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--price-color);
 }
 
 .teacher-description label span {
-    color: #bbb;
+    color: var(--border-gray);
 }
 
 .teacher-description label del {
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--text-disabled);
 }
 
 .curriculum-description label button {
     width: 35%;
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #bbb;
+    background-color: var(--button-secondary-bg);
 }
 
 .curriculum-description label button a {
@@ -214,9 +212,9 @@ body {
 .curriculum button,
 #submitCardBtn {
     width: 100%;
-    height: 45px;
+    height: 40px;
     border-radius: 5px;
-    color: white;
+    color: var(--white);
     background-color: var(--button-color);
     border: none;
     transition: 0.5s ease;
@@ -238,7 +236,7 @@ body {
 .curriculum h3,
 .payment h3,
 .rating h3 {
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-weight: 500;
     font-size: 28px;
 }
@@ -258,12 +256,12 @@ body {
 
 .payment-method button {
     width: 48%;
-    height: 45px;
+    height: 40px;
     border-radius: 5px;
     border: none;
     background-color: var(--button-color);
-    color: white;
-    font-family: 'Inter', Arial;
+    color: var(--white);
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 16px;
     font-weight: 500;
     transition: 0.5s ease;
@@ -271,13 +269,13 @@ body {
 }
 
 #acleda {
-    background-color: lightgray;
+    background-color: var(--gray-light);
     color: var(--button-color);
 }
 
 #acleda:hover {
     background-color: var(--button-hover-color);
-    color: white;
+    color: var(--white);
 }
 
 .payment-method button:hover {
@@ -298,7 +296,7 @@ body {
     font-size: 22px;
     font-weight: 500;
     margin-left: 10px;
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
 }
 
 .visaCARD,
@@ -315,7 +313,7 @@ body {
     padding: 14px 20px;
     border-radius: 5px;
     border: none;
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 14px;
     font-weight: 500;
 }
@@ -341,24 +339,24 @@ body {
     padding: 14px 20px;
     border-radius: 5px;
     border: none;
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 14px;
     font-weight: 500;
 }
 
 .select-country {
     width: 100%;
-    background: white;
+    background: var(--white);
     padding: 10px 20px;
     border-radius: 5px;
-    color: gray;
-    font-family: 'Inter', Arial;
+    color: var(--text-gray);
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
 }
 
 .select-country label {
     display: block;
     font-size: 14px;
-    color: #bbb;
+    color: var(--border-gray);
     margin-bottom: 5px;
 }
 
@@ -366,33 +364,33 @@ body {
     width: 100%;
     background: transparent;
     border: none;
-    color: black;
+    color: var(--black);
     font-size: 16px;
     outline: none;
     appearance: none;
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
 }
 
 .select-country option {
     width: 100%;
     display: flex;
     padding: 10px;
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
 }
 
 #submitCardBtn {
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 14px;
 }
 
 .rating h2 {
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-family: 12px;
     font-weight: 700;
 }
 
 .rating p {
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
 }
 
 .rating-star {
@@ -404,7 +402,7 @@ body {
 
 .rating-star i {
     font-size: 18px;
-    color: orangered;
+    color: var(--orange-bright);
 }
 
 /* Bar rows */
@@ -416,13 +414,13 @@ body {
 }
 
 .bar-row span {
-    font-family: 'Inter', Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
 }
 
 .star-label {
     font-size: 13px;
     font-weight: 600;
-    color: #333;
+    color: var(--text-dark-muted);
     min-width: 30px;
     display: flex;
     align-items: center;
@@ -430,14 +428,14 @@ body {
 }
 
 .star-label i {
-    color: #f5a623;
+    color: var(--star-yellow);
     font-size: 12px;
 }
 
 .bar-track {
     flex: 1;
     height: 8px;
-    background: #f0f0f0;
+    background: var(--track-gray);
     border-radius: 999px;
     overflow: hidden;
 }
@@ -446,9 +444,9 @@ body {
     height: 100%;
     width: 0%;
     /* starts at 0 for animation */
-    background: #f5a623;
+    background: var(--star-yellow);
     border-radius: 999px;
-    transition: width 1s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: 0.5s ease;
 }
 
 .count-label {

@@ -1,11 +1,9 @@
-/* Constrain wide sections for better readability */
-:root {
-    --max-content-width: 1200px;
-}
+@import url('variables.css');
+
 
 /* Global improvements: typography and base layout */
 body {
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--text-main);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -26,9 +24,9 @@ body {
     padding: 20px 7.5vw;
     align-items: center;
     justify-content: space-between;
-    background-color: #ffffff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 2px 10px var(--shadow-light);
 }
 
 .main-left {
@@ -67,7 +65,7 @@ body {
     border: none;
     border-radius: 5px;
     background-color: var(--button-color);
-    color: white;
+    color: var(--white);
     transition: 0.5s ease;
 }
 
@@ -95,7 +93,7 @@ body {
     padding: 30px 2vw;
     display: flex;
     flex-direction: column;
-    border: solid 1px red;
+    border: solid 1px var(--border-red);
 }
 
 .display {
@@ -138,11 +136,11 @@ body {
 .description {
     padding: 20px 0;
     line-height: 1.8;
-    color: #333;
+    color: var(--text-dark-muted);
 }
 
 .description h2 {
-    font-family: 'Bayon', sans-serif;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 1.8rem;
     color: #1a1a1a;
     margin-bottom: 20px;
@@ -155,7 +153,7 @@ body {
     display: inline-block;
     width: 6px;
     height: 30px;
-    background-color: var(--button-color, #007bff);
+    background-color: var(--button-color);
     border-radius: 10px;
 }
 
@@ -176,7 +174,7 @@ body {
     padding-left: 30px;
     margin-bottom: 15px;
     font-size: 1rem;
-    transition: transform 0.2s ease;
+    transition: 0.5s ease;
 }
 
 .description ul li::before {
@@ -185,12 +183,12 @@ body {
     font-weight: 900;
     position: absolute;
     left: 0;
-    color: var(--button-color, #28a745);
+    color: var(--button-color);
     font-size: 1.1rem;
 }
 
 .description ul li strong {
-    color: #000;
+    color: var(--black);
     display: block;
     margin-bottom: 2px;
 }
@@ -198,20 +196,20 @@ body {
 .teacher {
     margin-top: 40px;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--bg-light);
     border-radius: 12px;
-    border: 1px solid #eee;
+    border: 1px solid var(--border-lightest);
 }
 
 .description h2 {
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--button-color, #007bff);
+    border-bottom: 2px solid var(--button-color);
     display: inline-block;
     padding-bottom: 5px;
 }
 
 .teacher p {
-    color: #666;
+    color: var(--text-gray-medium);
     margin-bottom: 15px;
 }
 
@@ -223,7 +221,7 @@ body {
     padding: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .teacher-profile img {
@@ -231,7 +229,7 @@ body {
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--button-color, #007bff);
+    border: 3px solid var(--button-color);
 }
 
 .profile-about {
@@ -239,14 +237,14 @@ body {
 }
 
 .profile-about h4 {
-    font-family: 'Bayon', sans-serif;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     margin: 0;
-    color: #222;
+    color: var(--text-dark);
 }
 
 .profile-about p {
     margin: 5px 0 0;
-    color: #777;
+    color: var(--text-gray-light);
 }
 
 .teacher-profile button {
@@ -256,7 +254,7 @@ body {
     cursor: pointer;
     transition: 0.5s ease;
     font-size: 16px;
-    color: white;
+    color: var(--white);
     border: none;
     background-color: var(--button-color);
 }
@@ -270,9 +268,9 @@ body {
     height: auto;
     padding: 0;
     align-self: flex-start;
-    background-color: #f8fafc;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    background-color: var(--bg-page-alt);
+    box-shadow: 0 10px 25px var(--shadow-light);
+    border: 1px solid var(--border-light);
     overflow: hidden;
     position: sticky;
     top: 130px;
@@ -290,17 +288,17 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--sky-background-color, #f0f7ff);
+    background-color: var(--button-color, #f0f7ff);
     padding: 0 20px;
-    font-family: 'Bayon', sans-serif;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 1.4rem;
-    color: var(--header-footer);
+    color: var(--white);
     border-bottom: 2px solid rgba(0, 0, 0, 0.03);
 }
 
 .course-content h3 span {
     font-size: 0.9rem;
-    background: white;
+    background: var(--white);
     padding: 4px 12px;
     border-radius: 5px;
     color: var(--button-color);
@@ -327,22 +325,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
-    font-family: 'Bayon', sans-serif;
+    background-color: var(--white);
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-size: 1.1rem;
-    color: #444;
+    color: var(--border-dark);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .module-box label:hover {
-    background-color: #fcfcfc;
+    background-color: var(--bg-hover-subtle);
 }
 
 .module-box label span {
     color: var(--button-color);
     font-size: 18px;
-    transition: transform 0.3s ease;
+    transition: 0.5s ease;
 }
 
 .module-lesson {
@@ -350,7 +348,7 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9;
+    background-color: var(--bg-light);
 }
 
 .module-lesson button {
@@ -368,7 +366,7 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     background: transparent;
     text-align: left;
-    transition: all 0.3s ease;
+    transition: 0.5s ease;
     gap: 15px;
 }
 
@@ -377,7 +375,7 @@ body {
 }
 
 .module-lesson button:hover {
-    background-color: white;
+    background-color: var(--white);
     color: var(--button-color);
     padding-left: 25px;
     box-shadow: inset 4px 0 0 var(--button-color);

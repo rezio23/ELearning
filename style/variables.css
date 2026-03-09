@@ -1,0 +1,141 @@
+:root {
+    /* ==========================================================================
+       CORE PALETTE (Source Colors)
+       ========================================================================== */
+
+    /* Brand Colors */
+    --clr-deep-midnight: rgb(44, 44, 74);
+    --clr-muted-purple: #5F5881;
+    --clr-vibrant-coral: #F54B3B;
+
+    /* Status Colors */
+    --clr-success-green: #059500;
+    --clr-warning-amber: #f5a623;
+    --clr-error-red: #b30000;
+    --clr-info-blue: #17B0EB;
+
+    /* Category Bases */
+    --clr-math-purple: #5444A6;
+    --clr-tech-blue: #17B0EB;
+    --clr-health-green: #70DA7C;
+    --clr-business-orange: #ED8543;
+
+    /* Neutral Scale */
+    --neutral-white: #ffffff;
+    --neutral-black: #000000;
+    --neutral-50: #f9fafc;
+    --neutral-100: #f3f4f6;
+    --neutral-200: #e5e7eb;
+    --neutral-300: #d1d5db;
+    --neutral-400: #9ca3af;
+    --neutral-500: #6b7280;
+    --neutral-600: #4b5563;
+    --neutral-700: #374151;
+    --neutral-800: #1f2937;
+    --neutral-900: #111827;
+
+    /* 1. Base Colors */
+    --header-footer: var(--clr-deep-midnight);
+    --button-color: var(--clr-deep-midnight);
+    --footer-color: #282834;
+    --background-color: var(--neutral-white);
+    --white: var(--neutral-white);
+    --black: var(--neutral-900);
+
+    /* 2. Backgrounds */
+    --main-background-color: #FEF0EF;
+    /* Brand specific soft red */
+    --bg-light: var(--neutral-50);
+    --bg-page-alt: var(--neutral-100);
+    --bg-hover-subtle: var(--neutral-50);
+    --sky-background-color: #DCF7FE;
+    /* Unified with tech-bg */
+    --lightPurple-background-color: #EFEFF7;
+    /* Unified with math-bg */
+    --bg-subtle-gray: rgba(0, 0, 0, 0.04);
+
+    /* 3. Text Colors */
+    --text-main: var(--neutral-900);
+    --text-dark-vivid: var(--neutral-900);
+    --text-input: var(--neutral-800);
+    --text-secondary: var(--neutral-700);
+    --text-dark-muted: var(--neutral-700);
+    --text-muted: var(--neutral-500);
+    --text-gray-medium: var(--neutral-500);
+    --text-muted-light: var(--neutral-400);
+    --text-gray-light: var(--neutral-400);
+    --text-gray: var(--neutral-400);
+    --text-white: var(--neutral-white);
+    --text-disabled: var(--clr-error-red);
+    --title-color: var(--clr-muted-purple);
+
+    /* 4. UI Colors & Elements */
+    --button-hover-color: var(--clr-vibrant-coral);
+    --button-secondary-bg: var(--neutral-200);
+    --pagination-bg: var(--neutral-100);
+    --border-divider: var(--neutral-100);
+    --border-light: var(--neutral-200);
+    --border-lightest: var(--neutral-100);
+    --border-subtle: var(--neutral-300);
+    --border-gray: var(--neutral-300);
+    --border-dark: var(--neutral-700);
+    --border-red: var(--clr-error-red);
+    --border-very-subtle: rgba(0, 0, 0, 0.05);
+
+    /* 5. Category Colors */
+    --math-bg: #EFEFF7;
+    --math-accent: var(--clr-math-purple);
+    --math-icon-bg: #E2DCFE;
+    --math-card-bg: var(--math-bg);
+
+    --tech-bg: #DCF7FE;
+    --tech-accent: var(--clr-info-blue);
+    --tech-icon-bg: #BBF0FE;
+    --tech-card-bg: var(--tech-bg);
+
+    --health-bg: #E5FAE9;
+    --health-accent: var(--clr-health-green);
+    --health-icon-bg: #CEF5D6;
+    --health-card-bg: var(--health-bg);
+
+    --business-bg: #FDF3E9;
+    --business-accent: var(--clr-business-orange);
+    --business-icon-bg: #FAE0D1;
+    --business-card-bg: var(--business-bg);
+
+    /* 6. Functional & Decorative */
+    --price-color: var(--clr-success-green);
+    --star-color: var(--clr-warning-amber);
+    --star-yellow: var(--clr-warning-amber);
+    --rating: var(--clr-warning-amber);
+    --view-color: #DF5415;
+    --orange-bright: #FF6B35;
+    --wheat: #f5deb3;
+    --blue-pale: #e0f7fa;
+    --blue-vivid: var(--clr-info-blue);
+    --track-gray: var(--neutral-100);
+
+    /* 7. Shadows & Overlays */
+    --shadow-light: rgba(0, 0, 0, 0.04);
+    --shadow-medium: rgba(0, 0, 0, 0.08);
+    --box-shadow-default: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --overlay-light: rgba(255, 255, 255, 0.05);
+    --overlay-medium: rgba(255, 255, 255, 0.15);
+    --overlay-glass: rgba(255, 255, 255, 0.9);
+
+    /* 8. Spacing & Layout */
+    --border-radius: 8px;
+    /* Slightly more modern than 5px */
+    --default-font: 'SiteFont', 'Inter', 'Bayon', sans-serif;
+    --icon-width: 24px;
+    --icon-height: 24px;
+    --title-font-size: 36px;
+    --subtitle-font-size: 24px;
+    --content-font-size: 16px;
+    --input-font-size: 16px;
+    --max-content-width: 1200px;
+
+    /* 9. Gradients */
+    --gradient-hero: linear-gradient(135deg, #94BBE9 0%, #EEAECA 100%);
+    --gradient-register: linear-gradient(135deg, var(--clr-deep-midnight) 0%, #3b3bff 100%);
+}

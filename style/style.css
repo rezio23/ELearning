@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Bayon&display=swap');
+
+@font-face {
+    font-family: 'SiteFont';
+    src: local('Inter');
+    unicode-range: U+0000-007F, U+0080-00FF;
+    /* Latin characters */
+}
+
+@font-face {
+    font-family: 'SiteFont';
+    src: local('Bayon');
+    unicode-range: U+1780-17FF;
+    /* Khmer Unicode block */
+}
+
 :root {
     /* Color */
     --header-footer: rgb(44, 44, 74);
@@ -15,7 +31,7 @@
 
     --border-radius: 5px;
     --box-shadow: 0 0 10px #D9D9D9;
-    --default-font: 'Inter', sans-serif;
+    --default-font: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     --icon-width: 24px;
     --icon-height: 24px;
     --title-font-size: 36px;
@@ -52,44 +68,42 @@
     --text-white: #ffffff;
 }
 
-/*  
-How to use this root
-
-Use this link in another css file:
-@import url('variables.css');
-
-Usage example:
-background-color: var(--background-color);
-*/
-
-/*----------------------------------------------*/
-
-/*
-Icon style
-
-.icon {
-    width: var(--icon-width);
-    height: var(--icon-height);
-}
-
-*/
-
 * {
-    font-family: "Bayon", sans-serif;
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     font-weight: 400;
     font-style: normal;
     box-sizing: border-box;
 }
 
+html,
 body {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+}
+
+body {
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     padding: 0;
     padding-top: 80px;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     overflow-x: hidden;
     background-color: var(--main-background-color);
     font-size: var(--content-font-size);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
 }
 
 a {
@@ -145,8 +159,13 @@ header {
 
 .header-contact a {
     color: white;
-    font-family: 'Inter', Arial;
+    font-family: var(--default-font);
     font-weight: 400;
+    transition: 0.5s ease;
+}
+
+.header-contact a:hover {
+    color: var(--star-color);
 }
 
 .contact-left {
@@ -179,7 +198,6 @@ header {
 .logo a {
     font-size: 36px;
     color: var(--title-color);
-    font-weight: bold;
     text-decoration: none;
 }
 
@@ -198,7 +216,7 @@ header ul li {
 header a {
     text-decoration: none;
     color: var(--title-color);
-    transition: 0.4s;
+    transition: 0.5s ease;
 }
 
 header a:hover {
@@ -235,13 +253,13 @@ input:focus {
 
 header button {
     width: 100px;
-    height: 36px;
+    height: 40px;
     background-color: var(--button-color);
     color: var(--text-white);
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: 0.4s;
+    transition: 0.5s ease;
 }
 
 header button a {
@@ -310,13 +328,12 @@ footer {
 
 .footerItem h1 {
     font-size: 2.2rem;
-    font-weight: bold;
     color: var(--text-main);
 }
 
 .footerItem h2 {
     font-size: 1.4rem;
-    font-family: 'Inter', Arial;
+    font-family: var(--default-font);
     color: var(--text-muted);
 }
 
@@ -340,7 +357,7 @@ footer {
 }
 
 .footerProfile p {
-    font-family: 'Inter';
+    font-family: var(--default-font);
     font-weight: 500;
     color: var(--text-muted);
 }
@@ -360,7 +377,7 @@ footer {
 .footerPartner a,
 .footerReference a {
     font-size: 20px;
-    font-family: 'Inter', Arial;
+    font-family: var(--default-font);
     font-weight: 500;
     color: var(--text-secondary);
     cursor: pointer;
@@ -375,6 +392,6 @@ footer {
     padding: 10px 0px;
     background-color: var(--header-footer);
     color: white;
-    font-family: 'Inter', Arial;
+    font-family: var(--default-font);
     font-weight: bold;
 }
