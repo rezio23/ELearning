@@ -186,6 +186,9 @@ body {
     transition: 0.5s ease;
     margin-bottom: 20px;
     background-color: var(--white);
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .lesson:hover {
@@ -297,15 +300,12 @@ body {
     margin-top: 10px;
     background-color: var(--button-color);
     padding: 0;
-}
-
-.lesson button a {
     color: var(--white);
-    width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    border: none;
 }
 
 .lesson button:hover {

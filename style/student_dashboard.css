@@ -260,7 +260,6 @@ body {
 .upcoming-title a,
 .enrolled-title a {
     font-size: 14px;
-    font-weight: 600;
     color: #7d4dff;
     text-decoration: none;
     margin: 0;
@@ -307,6 +306,8 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     overflow: hidden;
+    text-decoration: none;
+    color: inherit;
 }
 
 .course:hover {
@@ -388,7 +389,6 @@ body {
 
 .dailynotice-title p {
     font-size: 14px;
-    font-weight: 600;
     color: #7d4dff;
     cursor: pointer;
     margin: 0;

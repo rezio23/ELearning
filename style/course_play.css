@@ -103,6 +103,11 @@ body {
     background: transparent;
     object-fit: cover;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+    font-size: 1.5rem;
 }
 
 .selector {
@@ -118,19 +123,30 @@ body {
 }
 
 .selector ul {
+    width: 100%;
     height: auto;
     display: flex;
     gap: 40px;
     list-style: none;
     padding: 0;
+    color: var(--text-gray-light);
     margin-bottom: 0;
+    border-bottom: solid 1px black;
 }
 
-.container-left hr {
-    width: 100%;
-    margin-top: 0;
-    border: solid 1px black;
+.selector li{
+    transition: 0.5s ease;
 }
+
+.selector li:hover{
+    transform: translateY(-3px);
+}
+
+#Overview{
+    color: var(--button-hover-color);
+    border-bottom: solid 4px var(--button-hover-color);
+}
+
 
 .description {
     padding: 20px 0;
@@ -391,6 +407,5 @@ body {
 .module-lesson button.active {
     background-color: var(--sky-background-color);
     color: var(--button-color);
-    font-weight: 600;
     box-shadow: inset 4px 0 0 var(--button-color);
 }

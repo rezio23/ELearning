@@ -66,8 +66,8 @@ let courseData = [
 
 courseData.forEach((course) => {
   let courseItem = `
-  <div class="course-item-card" id="course${course.courseId}">
-    <img class="course-thumb" src="${course.courseImage}" alt="Maths chalkboard">
+  <a href="src/course_details.html" class="course-item-card" id="course${course.courseId}">
+    <img class="course-thumb" src="${course.courseImage}" alt="${course.courseTitle}">
     <div class="course-item-card-favorite"></div>
     <hr>
     <h3>${course.courseTitle}</h3>
@@ -78,8 +78,8 @@ courseData.forEach((course) => {
       </div>
       <h2 class="price"><del>$19.99</del>Free</h2>
     </div>
-    <button><a href="src/course_details.html">មើល</a></button>
-  </div>
+    <button>មើល</button>
+  </a>
   `;
 
   $(".course-item").append(courseItem);

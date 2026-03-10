@@ -133,6 +133,104 @@ let data = {
     lessonOldPrice: 79.99,
     lessonNewPrice: "Free",
   },
+  lesson10: {
+    lessonID: "course10",
+    lessonIMG: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop",
+    lessonDuration: "150",
+    lessonCategoryENG: "Science",
+    lessonCategoryKH: "បច្ចេកវិទ្យា",
+    lessonTitle: "មូលដ្ឋានគ្រឹះសរសេរកូដ",
+    lessonTeacherProfile: "../asset/author/main2.jpg",
+    lessonTeacherName: "សុខ ជា",
+    lessonTeacherDegree: "វិស្វកម្មសូហ្វវែរ",
+    lessonTaught: "១២០",
+    lessonOldPrice: 59.99,
+    lessonNewPrice: "Free",
+  },
+  lesson11: {
+    lessonID: "course11",
+    lessonIMG: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?q=80&w=600&auto=format&fit=crop",
+    lessonDuration: "45",
+    lessonCategoryENG: "Business",
+    lessonCategoryKH: "ជំនួញ",
+    lessonTitle: "ទីផ្សារឌីជីថល",
+    lessonTeacherProfile: "../asset/author/main3.jpg",
+    lessonTeacherName: "ស៊ុយ រតនា",
+    lessonTeacherDegree: "បរិញ្ញាបត្រ ទីផ្សារ",
+    lessonTaught: "១៥០",
+    lessonOldPrice: 89.99,
+    lessonNewPrice: "15.00",
+  },
+  lesson12: {
+    lessonID: "course12",
+    lessonIMG: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop",
+    lessonDuration: "120",
+    lessonCategoryENG: "Science",
+    lessonCategoryKH: "បច្ចេកវិទ្យា",
+    lessonTitle: "ជីវវិទ្យាទូទៅ",
+    lessonTeacherProfile: "../asset/author/main4.jpg",
+    lessonTeacherName: "ចាន់ សុវណ្ណ",
+    lessonTeacherDegree: "អនុបណ្ឌិត ជីវវិទ្យា",
+    lessonTaught: "៧០",
+    lessonOldPrice: 59.99,
+    lessonNewPrice: "Free",
+  },
+  lesson13: {
+    lessonID: "course13",
+    lessonIMG: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600&auto=format&fit=crop",
+    lessonDuration: "50",
+    lessonCategoryENG: "Health",
+    lessonCategoryKH: "សុខភាព",
+    lessonTitle: "ការហាត់ប្រាណដើម្បីសុខភាព",
+    lessonTeacherProfile: "../asset/author/main5.jpg",
+    lessonTeacherName: "ជា វិចិត្រ",
+    lessonTeacherDegree: "គ្រូបង្វឹកកីឡា",
+    lessonTaught: "៣០",
+    lessonOldPrice: 39.99,
+    lessonNewPrice: "20.00",
+  },
+  lesson14: {
+    lessonID: "course14",
+    lessonIMG: "https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=600&auto=format&fit=crop",
+    lessonDuration: "85",
+    lessonCategoryENG: "Math",
+    lessonCategoryKH: "គណិតវិទ្យា",
+    lessonTitle: "ពីជគណិតកម្រិតមូលដ្ឋាន",
+    lessonTeacherProfile: "../asset/author/main6.jpg",
+    lessonTeacherName: "សុខ សំណាង",
+    lessonTeacherDegree: "បរិញ្ញាបត្រ គណិតវិទ្យា",
+    lessonTaught: "២០០",
+    lessonOldPrice: 49.99,
+    lessonNewPrice: "Free",
+  },
+  lesson15: {
+    lessonID: "course15",
+    lessonIMG: "https://images.unsplash.com/photo-1555448248-2571daf6344b?q=80&w=600&auto=format&fit=crop",
+    lessonDuration: "115",
+    lessonCategoryENG: "General",
+    lessonCategoryKH: "ចំណេះដឹងទូទៅ",
+    lessonTitle: "ចិត្តសាស្ត្រមូលដ្ឋាន",
+    lessonTeacherProfile: "../asset/author/main7.jpg",
+    lessonTeacherName: "ម៉េង ហួរ",
+    lessonTeacherDegree: "បណ្ឌិត ចិត្តសាស្ត្រ",
+    lessonTaught: "១១០",
+    lessonOldPrice: 65.00,
+    lessonNewPrice: "10.00",
+  },
+  lesson16: {
+    lessonID: "course16",
+    lessonIMG: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=600&auto=format&fit=crop",
+    lessonDuration: "200",
+    lessonCategoryENG: "Design",
+    lessonCategoryKH: "រចនារូបភាព",
+    lessonTitle: "មូលដ្ឋានគ្រឹះ UI/UX",
+    lessonTeacherProfile: "../asset/author/main8.jpg",
+    lessonTeacherName: "រិទ្ធី កែវ",
+    lessonTeacherDegree: "បរិញ្ញាបត្រ រចនា",
+    lessonTaught: "៨៥",
+    lessonOldPrice: 99.99,
+    lessonNewPrice: "Free",
+  },
 };
 
 for (let i in data) {
@@ -193,9 +291,8 @@ for (let i in data) {
   $("#count-business").text(`${businessLessons} មេរៀន`)
 
   let lessonItem = `
-        
-        <div class="lesson" id="${lesson.lessonID}" data-category="${lesson.lessonCategoryENG}" data-price="${lesson.lessonNewPrice}">
-        <img src="${lesson.lessonIMG}" alt="imageCourse">
+        <a href="course_details.html" target="_blank" class="lesson" id="${lesson.lessonID}" data-category="${lesson.lessonCategoryENG}" data-price="${lesson.lessonNewPrice}">
+        <img src="${lesson.lessonIMG}" alt="${lesson.lessonTitle}">
         <div class="lessonType">
             <label for="lessonMain"><i class="fa-regular fa-circle-play"></i> ${lesson.lessonDuration} នាទី</label>
             <div style="background-color: ${categoryColor}" class="lessonCategory">
@@ -219,8 +316,8 @@ for (let i in data) {
             <label for="star"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></label>
             <label style="color: ${priceColor}" for="price"><del>${lesson.lessonOldPrice}$</del> ${lesson.lessonNewPrice}</label>
         </div>
-        <button><a href="course_details.html" target="_blank">ដាក់ចូលកន្ត្រក</a></button>
-    </div>
+        <button>ដាក់ចូលកន្ត្រក</button>
+    </a>
     `;
 
   $("#course-item").append(lessonItem);
@@ -230,6 +327,8 @@ for (let i in data) {
 $('input[name="checkBox"]').on("change", function () {
   const checkedValue = $(this).val();
   $('input[name="checkBox"]').not(this).prop("checked", false);
+
+  $("#showAllBtn").hide();
 
   if (!$(this).prop("checked") || checkedValue === "all") {
     $(".lesson").show();
@@ -245,12 +344,10 @@ $('input[name="checkBox"]').on("change", function () {
 });
 
 $("#course1, #course2, #course3").show();
-$("#course4, #course5, #course6, #course7, #course8, #course9").hide();
+$(".lesson").not("#course1, #course2, #course3").hide();
 
 const ShowAllCourse = () => {
-  $(
-    "#course1, #course2, #course3, #course4, #course5, #course6, #course7, #course8, #course9",
-  ).show();
+  $(".lesson").show();
   $("#showAllBtn").hide();
 };
 

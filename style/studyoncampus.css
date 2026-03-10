@@ -252,7 +252,6 @@ body {
     padding: 0 40px;
     border-radius: 12px;
     font-size: 1.1rem;
-    font-weight: 700;
 }
 
 #tag-community {
@@ -262,7 +261,6 @@ body {
 
 #tag-community a {
     color: var(--white);
-    font-weight: 600;
 }
 
 #tag-community:hover {
