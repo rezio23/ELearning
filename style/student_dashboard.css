@@ -1,0 +1,474 @@
+@import url('variables.css');
+
+
+/* Global improvements: typography and base layout */
+body {
+    font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--lightPurple-background-color);
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Sidebar Sidebar Design */
+.sidebar {
+    width: 280px;
+    height: calc(100vh - 70px);
+    background-color: #b491ff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    color: white;
+    box-shadow: 0 10px 40px rgba(125, 77, 255, 0.4);
+    position: sticky;
+    top: 35px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Logo Section */
+.sidebar-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.logo-box {
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.logo-box:hover {
+    transform: scale(1.05);
+}
+
+.logo-box img {
+    width: 120px;
+    border-radius: 30px;
+    color: white;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+}
+
+.sidebar-nav {
+    flex-grow: 1;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 19px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 25px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav ul li a i {
+    font-size: 22px;
+    width: 30px;
+    text-align: center;
+}
+
+.sidebar-nav ul li.active a {
+    color: white;
+    font-weight: 700;
+}
+
+.sidebar-nav ul li a:hover {
+    color: white;
+    transform: translateX(10px);
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 25px;
+    position: relative;
+}
+
+.sidebar-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: #9f73ff;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 19px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 25px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.container {
+    width: calc(100% - 320px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.header-container {
+    width: 100%;
+    height: 30%;
+    border-radius: 5px;
+    background-color: #b491ff;
+    padding: 30px;
+    color: var(--white);
+}
+
+.header-profile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.student-profile {
+    width: 30%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.student-profile img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: solid 2px navy;
+    margin-right: 2%;
+}
+
+.student-profile label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.student-profile p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.hello-text {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    /* padding-top: 3%; */
+    gap: 0;
+}
+
+.hello-text h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.hello-text h4 {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.section {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    overflow: hidden;
+}
+
+.section-left {
+    width: 67%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.upcoming,
+.enrolled {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.upcoming {
+    height: 55%;
+}
+
+.enrolled {
+    height: 45%;
+}
+
+.upcoming-title,
+.enrolled-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.upcoming-title h3,
+.enrolled-title h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--clr-deep-midnight);
+    margin: 0;
+}
+
+.upcoming-title a,
+.enrolled-title a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7d4dff;
+    text-decoration: none;
+    margin: 0;
+}
+
+.upcoming-title a:hover,
+.enrolled-title a:hover {
+    text-decoration: underline;
+}
+
+.upcoming-content,
+.enrolled-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upcoming-content {
+    height: 84%;
+    margin-top: 1%;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.enrolled-content {
+    width: 100%;
+    height: 85%;
+    align-items: end;
+    justify-content: start;
+    gap: 20px;
+}
+
+.course {
+    width: 50%;
+    height: 90%;
+    background: white;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(125, 77, 255, 0.15);
+}
+
+.course-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+}
+
+.course-title img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.course-title .title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.course-title .title h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--clr-deep-midnight);
+    margin: 0;
+}
+
+.course-title .title h4 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.course-title .description {
+    width: 100%;
+    font-size: 12px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.section-right {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+}
+
+.dailynotice-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.dailynotice-title h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--clr-deep-midnight);
+    margin: 0;
+}
+
+.dailynotice-title p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #7d4dff;
+    cursor: pointer;
+    margin: 0;
+}
+
+.dailynotice-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notice-item {
+    background: white;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.notice-item:hover {
+    transform: translateX(-5px);
+}
+
+.notice-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--clr-deep-midnight);
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.notice-item p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    margin-top: 0;
+}
+
+.notice-item a {
+    font-size: 13px;
+    font-weight: 700;
+    color: #7d4dff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notice-item a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 100px;
+        padding: 40px 10px;
+        border-radius: 30px;
+    }
+
+    .sidebar-nav ul li a span,
+    .logout-btn span {
+        display: none;
+    }
+
+    .sidebar-nav ul li a,
+    .logout-btn {
+        justify-content: center;
+        padding: 15px;
+    }
+
+    .logo-box {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+    }
+
+    .logo-box i {
+        font-size: 35px;
+    }
+}

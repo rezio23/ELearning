@@ -109,7 +109,7 @@ section {
 }
 
 .course-title button {
-    width: 120px;
+    width: 200px;
     height: var(--button-height);
     background-color: var(--button-color);
     color: var(--white);
@@ -371,7 +371,7 @@ section {
 }
 
 .category-title button {
-    width: 240px;
+    width: 200px;
     height: var(--button-height);
     background-color: var(--button-color);
     color: var(--text-white);
