@@ -1,7 +1,5 @@
 @import url('variables.css');
 
-
-/* Global improvements: typography and base layout */
 body {
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--text-main);
@@ -417,4 +415,42 @@ body {
 
 #submitCardBtn:hover {
     background-color: var(--button-hover-color);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .container-left,
+    .container-right {
+        width: 100%;
+    }
+
+    .container-left {
+        flex-direction: column;
+    }
+
+    .placed-order, .add-order {
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .payment-method {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .payment-method button {
+        width: 100%;
+    }
+
+    #cardNumber, #expirationDate, #securityCode {
+        width: 100%;
+    }
 }

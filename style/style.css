@@ -105,7 +105,6 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
-    /* Chrome, Safari and Opera */
 }
 
 a {
@@ -157,7 +156,6 @@ p {
     margin: 0;
 }
 
-
 /* Header */
 header {
     width: 100%;
@@ -192,15 +190,14 @@ header {
 
 .header-contact a:hover{
     color: var(--star-color);
-    transform: scale(1.05); /* Scales the text elegantly */
+    transform: scale(1.05);
 }
 
-/* Also animate the icons when hovering over the container! */
 .contact-left div,
 .contact-right div {
     display: flex;
     align-items: center;
-    gap: 8px; /* Added proper spacing between icon and text */
+    gap: 8px;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -208,7 +205,7 @@ header {
 .contact-left div:hover i,
 .contact-right div:hover i {
     color: var(--star-color);
-    transform: translateY(-2px); /* Makes the icon bounce slightly on hover */
+    transform: translateY(-2px);
     transition: 0.3s ease;
 }
 
@@ -217,7 +214,7 @@ header {
     width: auto;
     display: flex;
     align-items: center;
-    gap: 30px; /* Increased gap to handle scaling text without overlap */
+    gap: 30px;
 }
 
 .contact-right {
@@ -247,9 +244,9 @@ header {
 }
 
 .logo img {
-    height: 75px; /* Constraining height to fit header nicely */
+    height: 75px;
     width: auto;
-    border-radius: 8px; /* Optional slight rounding for logo if needed */
+    border-radius: 8px;
     object-fit: contain;
     mix-blend-mode: multiply;
     filter: contrast(1.5) brightness(1.1);
@@ -352,7 +349,6 @@ header button:hover a {
 .future a:hover {
     color: var(--button-hover-color);
 }
-
 
 /* Footer */
 footer {
@@ -471,4 +467,99 @@ footer {
     color: white;
     font-family: var(--default-font);
     font-weight: bold;
+}
+
+/* Responsive */
+
+/* Tablet & Smaller Desktop */
+@media (max-width: 1024px) {
+    header ul {
+        gap: 30px;
+    }
+
+    .header-contact {
+        padding: 0 4vw;
+    }
+
+    .header-ul {
+        padding: 0 4vw;
+    }
+
+    .footer-Item {
+        padding: 35px 4vw;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footerItem {
+        width: 45%;
+    }
+    
+    .future h1 {
+        font-size: 36px;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    body {
+        padding-top: 130px;
+    }
+
+    /* Stack header for mobile */
+    .header-contact {
+        display: none;
+    }
+
+    .header-ul {
+        height: auto;
+        flex-direction: column;
+        padding: 15px 4vw;
+        gap: 15px;
+    }
+
+    header ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    header .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    header .header-search {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .future {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .future h1 {
+        font-size: 28px;
+    }
+
+    /* Footer stacking */
+    .footer-Item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footerItem {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footerSocial {
+        justify-content: center;
+    }
 }

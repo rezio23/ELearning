@@ -1,7 +1,5 @@
 @import url('variables.css');
 
-
-/* Global improvements: typography and base layout */
 body {
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--text-main);
@@ -14,7 +12,6 @@ body {
     justify-content: space-between;
 }
 
-/* Sidebar Sidebar Design */
 .sidebar {
     width: 280px;
     height: calc(100vh - 70px);
@@ -30,7 +27,6 @@ body {
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Logo Section */
 .sidebar-logo {
     display: flex;
     justify-content: center;
@@ -200,7 +196,6 @@ body {
     flex-direction: column;
     align-items: start;
     justify-content: end;
-    /* padding-top: 3%; */
     gap: 0;
 }
 
@@ -471,6 +466,7 @@ body {
     .logout-btn {
         justify-content: center;
         padding: 15px;
+        border-radius: 50%;
     }
 
     .logo-box {
@@ -479,7 +475,90 @@ body {
         border-radius: 20px;
     }
 
-    .logo-box i {
-        font-size: 35px;
+    .logo-box img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container {
+        width: calc(100% - 130px);
+    }
+}
+
+@media (max-width: 880px) {
+    body {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+        border-radius: 15px;
+    }
+
+    .sidebar-logo {
+        margin-bottom: 0;
+    }
+
+    .logo-box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sidebar-nav ul {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .sidebar-footer {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .sidebar-footer::before {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section-left,
+    .section-right {
+        width: 100%;
+    }
+
+    .header-profile {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .student-profile {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 520px) {
+    .enrolled-content {
+        flex-direction: column;
+    }
+
+    .course {
+        width: 100%;
     }
 }

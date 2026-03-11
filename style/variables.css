@@ -1,8 +1,4 @@
 :root {
-    /* ==========================================================================
-       CORE PALETTE (Source Colors)
-       ========================================================================== */
-
     /* Brand Colors */
     --clr-deep-midnight: rgb(44, 44, 74);
     --clr-muted-purple: #5F5881;
@@ -44,14 +40,11 @@
 
     /* 2. Backgrounds */
     --main-background-color: #FEF0EF;
-    /* Brand specific soft red */
     --bg-light: var(--neutral-50);
     --bg-page-alt: var(--neutral-100);
     --bg-hover-subtle: var(--neutral-50);
     --sky-background-color: #DCF7FE;
-    /* Unified with tech-bg */
     --lightPurple-background-color: #EFEFF7;
-    /* Unified with math-bg */
     --bg-subtle-gray: rgba(0, 0, 0, 0.04);
 
     /* 3. Text Colors */

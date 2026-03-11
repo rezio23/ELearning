@@ -1,7 +1,5 @@
 @import url('variables.css');
 
-
-/* Global improvements: typography and base layout */
 body {
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--text-main);
@@ -11,7 +9,6 @@ body {
     background-color: var(--lightPurple-background-color);
 }
 
-/* Styles moved to top to match HTML order (Header) */
 .header-actions {
     display: flex;
     gap: 15px;
@@ -287,4 +284,45 @@ body {
     text-shadow: 0 0 15px var(--white);
     transform: scale(1.05) translateY(-2px);
     box-shadow: 0 0 15px var(--white);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding: 35px 5vw;
+        gap: 40px;
+    }
+
+    .container-left,
+    .container-right {
+        width: 100%;
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .register-card {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tag-button {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tag-button button {
+        width: 100%;
+    }
+
+    .register-card h1 {
+        font-size: 1.5rem;
+    }
 }

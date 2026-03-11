@@ -7,7 +7,7 @@ let courseData = [
     "https://wallpapers.com/images/featured/physics-w4ac9eqvnunc0ocp.jpg",
     courseOldPrice: 19.99,
     courseNewPrice: 'Free',
-    courseAuthorImage: "mainpfp.jpg",
+    courseAuthorImage: "main5.jpg",
   },
   {
     courseId: 2,
@@ -17,7 +17,7 @@ let courseData = [
       "https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=1jJ3N_Ix2nIguRWAof8ppMEpu3Bzvx7Q&itok=WSHuusB5",
     courseOldPrice: 99.99,
     courseNewPrice: 'Free',
-    courseAuthorImage: "main11.jpg",
+    courseAuthorImage: "main16.jpg",
   },
   {
     courseId: 3,
@@ -27,7 +27,7 @@ let courseData = [
       "https://www.drashwanimehta.com/assets/image/blog/tips-from-cardiologist-for-healthy-heart.webp",
     courseOldPrice: 99.99,
     courseNewPrice: 'Free',
-    courseAuthorImage: "main3.jpg",
+    courseAuthorImage: "main1.jpg",
   },
   {
     courseId: 4,
@@ -37,7 +37,7 @@ let courseData = [
       "https://media.licdn.com/dms/image/v2/D4D12AQHGC4-mftneKw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1683647951916?e=2147483647&v=beta&t=sqbOZkehA39pUJx6ifvxVkEaSB73CDP1t-8JY8BeWKI",
     courseOldPrice: 79.99,
     courseNewPrice: '$9.99',
-    courseAuthorImage: "main4.jpg",
+    courseAuthorImage: "main11.jpg",
   },
   {
     courseId: 5,
@@ -47,7 +47,7 @@ let courseData = [
       "https://png.pngtree.com/thumb_back/fw800/background/20251126/pngtree-stack-of-self-help-and-business-books-with-glasses-pen-on-image_20619670.webp",
     courseOldPrice: 79.99,
     courseNewPrice: 'Free',
-    courseAuthorImage: "main5.jpg",
+    courseAuthorImage: "main8.jpg",
   },
   {
     courseId: 6,
@@ -56,7 +56,7 @@ let courseData = [
     courseImage: "https://cdn.mos.cms.futurecdn.net/ayTnhRypWyGEgi5zod4RAd.jpg",
     courseOldPrice: 79.99,
     courseNewPrice: '$29.99',
-    courseAuthorImage: "main6.jpg",
+    courseAuthorImage: "main10.jpg",
   },
   {
     courseId: 7,
@@ -66,7 +66,7 @@ let courseData = [
       "https://m.media-amazon.com/images/S/aplus-media/sota/cdab3996-5d25-4e0c-952b-09d3c4a5635f.__CR0,0,970,600_PT0_SX970_V1___.jpg",
     courseOldPrice: 79.99,
     courseNewPrice: 'Free',
-    courseAuthorImage: "main7.jpg",
+    courseAuthorImage: "main2.jpg",
   },
   {
     courseId: 8,
@@ -76,7 +76,7 @@ let courseData = [
       "https://4kwallpapers.com/images/wallpapers/geometric-3d-render-3840x2160-12087.jpg",
     courseOldPrice: 79.99,
     courseNewPrice: 'Free',
-    courseAuthorImage: "main8.jpg",
+    courseAuthorImage: "main3.jpg",
   },
 ];
 
@@ -201,49 +201,49 @@ let teachers = [
     teacherId: 1,
     teacherName: "លោកគ្រូ វិឈាន សម្បត្តិ",
     teacherState: "បរិញ្ញាបត្រ វិទ្យាសាស្ត្រកុំព្យូទ័រ",
-    teacherProfile: "mainpfp.jpg",
+    teacherProfile: "main5.jpg",
   },
   {
     teacherId: 2,
     teacherName: "លោកគ្រូ អ៊ុក សុបញ្ញា",
     teacherState: "បរិញ្ញាបត្រ វិទ្យាសាស្ត្រកុំព្យូទ័រ",
-    teacherProfile: "main10.jpg",
+    teacherProfile: "main16.jpg",
   },
   {
     teacherId: 3,
     teacherName: "លោកគ្រូ ចាន់ ដារ៉ា",
     teacherState: "បរិញ្ញាបត្រ គណិតវិទ្យា",
-    teacherProfile: "main8.jpg",
+    teacherProfile: "main3.jpg",
   },
   {
     teacherId: 4,
     teacherName: "Mr. John",
     teacherState: "បរិញ្ញាបត្រ វិជ្ជបណ្ឌិត",
-    teacherProfile: "main3.jpg",
+    teacherProfile: "main1.jpg",
   },
   {
     teacherId: 5,
     teacherName: "Ms. Alice",
     teacherState: "បណ្ឌិត ចិត្តសាស្ត្រ",
-    teacherProfile: "main4.jpg",
+    teacherProfile: "main11.jpg",
   },
   {
     teacherId: 6,
     teacherName: "អ្នកគ្រូ សាន សុជាតា",
     teacherState: "អនុបណ្ឌិត រូបវិទ្យា",
-    teacherProfile: "main6.jpg",
+    teacherProfile: "main10.jpg",
   },
   {
     teacherId: 7,
     teacherName: "លោកគ្រូ មិញ ផាលាភ",
     teacherState: "បណ្ឌិត វិទ្យាសាស្ត្រកុំព្យូទ័រ",
-    teacherProfile: "main7.jpg",
+    teacherProfile: "main2.jpg",
   },
   {
     teacherId: 8,
     teacherName: "អ្នកគ្រូ សែន ពិសី",
     teacherState: "បរិញ្ញាបត្រ ពាណិជ្ជកម្មអន្តរជាតិ",
-    teacherProfile: "main11.jpg",
+    teacherProfile: "main8.jpg",
   },
 ];
 

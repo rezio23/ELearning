@@ -85,7 +85,7 @@ $("#submitCardBtn").on("click", function (e) {
       return;
     }
 
-    if (expirationDate.length !== 4) {
+    if (expirationDate.length !== 5) {
       Swal.fire({
         icon: "error",
         title: "កាលបរិច្ឆេទផុតកំណត់មិនត្រឹមត្រូវ!",

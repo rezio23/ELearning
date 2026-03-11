@@ -9,6 +9,7 @@ A premium, responsive e-learning platform frontend meticulously crafted with HTM
 * **Hero Landing Page**: A striking welcome experience with clear CTAs and featured categories.
 * **Advanced Filtering**: Browse courses by category (Technology, Design, Business, etc.) and filter by price (Free/Paid) in a sleek sidebar.
 * **Dynamic Data Rendering**: Courses are dynamically populated from JavaScript data structures (`allcourse.js`), allowing for easy content scalability.
+* **Welcome Modal**: First-time visitors are greeted by an automated promotional pop-up poster built seamlessly into the landing experience.
 
 ### 2. **Immersive Learning Experience**
 
@@ -21,6 +22,7 @@ A premium, responsive e-learning platform frontend meticulously crafted with HTM
 
 * **Interactive Shopping Cart**: Frontend logic for cost calculation, including subtotals, discounts, and fees.
 * **Modern Payment UI**: Dedicated checkout flows for **VISA/MasterCard** and local **ACLEDA KHQR** digital payments.
+* **Smart Form Formatting**: Visa cards and expiration dates automatically add spacing and formatting natively as users type in the inputs.
 * **Responsive Layout**: Optimized for smooth enrollment on any device, from smartphones to desktops.
 
 ### 4. **Secure Authentication Flow**
@@ -35,6 +37,7 @@ A premium, responsive e-learning platform frontend meticulously crafted with HTM
 * **Component-Based Styling**: Scoped CSS for each view (e.g., `landing.css`, `course_play.css`) ensures high maintainability.
 * **Efficient UI Logic**: Highly interactive elements powered by Vanilla JS and jQuery for smooth, low-latency performance.
 * **Telegram Bot Integration**: A functional contact form (`studyoncampuss.html`) that messages inquiries directly to admin via Telegram Bot API.
+* **Fully Responsive Views**: 100% responsive implementations on all 8 core views relying heavily on native Grid and Flexbox for optimal mobile & tablet fluidity.
 
 ---
 

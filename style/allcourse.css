@@ -1,7 +1,5 @@
 @import url('variables.css');
 
-
-/* Global improvements: typography and base layout */
 body {
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     color: var(--text-main);
@@ -10,7 +8,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Styles moved to top to match HTML order (Header) */
 .header-actions {
     display: flex;
     gap: 15px;
@@ -126,7 +123,6 @@ body {
     height: auto;
     display: flex;
     padding: 15px 20px;
-    /* padding-bottom: 30px; */
     align-items: center;
     justify-content: space-between;
     color: var(--text-secondary);
@@ -159,7 +155,6 @@ body {
     background-color: var(--button-color);
     color: var(--white);
     display: flex;
-    /* Changed from default inline-flex */
     margin: 0 auto;
     margin-top: 30px;
 }
@@ -253,7 +248,6 @@ body {
 .self-Profile {
     height: 100%;
     flex-grow: 1;
-    /* Allow it to take up available space */
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -314,4 +308,48 @@ body {
 
 footer {
     background-color: var(--lightPurple-background-color);
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .container-left,
+    .container-right {
+        width: 100%;
+    }
+
+    .course-item {
+        gap: 2%;
+    }
+    .lesson {
+        width: 32%;
+    }
+}
+
+@media (max-width: 880px) {
+    .lesson {
+        width: 49%;
+    }
+}
+
+@media (max-width: 520px) {
+    .lesson {
+        width: 100%;
+    }
+    
+    .container-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .title-sorted {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
