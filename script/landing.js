@@ -170,7 +170,7 @@ let categories = [
   },
   {
     title: "ចំណេះដឹងទូទៅ",
-    info: "ការអភិវឌ្ឃន៍គោលគំនិត, វិធីសាស្ត្រនៃការរស់នៅជាបុគ្គលមានវិន័យ, ផ្សេងៗ",
+    info: "ការអភិវឌ្ឃន៍គោលគំនិត, ផ្សេងៗ",
     titleID: "General",
     titleIcon: "fa-solid fa-code-branch",
   },

@@ -305,6 +305,12 @@ body {
     .register-card {
         padding: 30px;
     }
+
+    #locationTitle,
+    #messageTitle {
+        margin: 0 -20px;
+        padding: 15px 20px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -324,5 +330,18 @@ body {
 
     .register-card h1 {
         font-size: 1.5rem;
+    }
+
+    #locationTitle,
+    #messageTitle {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    #locationTitle,
+    #messageTitle {
+        font-size: 20px;
+        padding-left: 15px;
     }
 }

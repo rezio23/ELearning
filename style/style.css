@@ -83,6 +83,8 @@ body {
     -ms-overflow-style: none;
     /* IE and Edge */
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 html::-webkit-scrollbar,
@@ -95,7 +97,7 @@ body {
     font-family: 'SiteFont', 'Inter', 'Bayon', sans-serif;
     padding: 0;
     padding-top: 80px;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     margin: 0;
     overflow-x: hidden;
@@ -505,7 +507,7 @@ footer {
 /* Mobile */
 @media (max-width: 768px) {
     body {
-        padding-top: 130px;
+        padding-top: 180px;
     }
 
     /* Stack header for mobile */
@@ -531,6 +533,11 @@ footer {
     header .header-actions {
         width: 100%;
         justify-content: space-between;
+        transition: all 0.3s ease;
+    }
+    
+    header.header-scrolled .header-actions {
+        display: none;
     }
 
     header .header-search {
@@ -561,5 +568,28 @@ footer {
 
     .footerSocial {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 240px;
+    }
+
+    header .header-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    header .header-search {
+        max-width: 100%;
+    }
+    
+    header button {
+        width: 100%;
+    }
+    
+    .future h1 {
+        font-size: 24px;
     }
 }

@@ -418,7 +418,7 @@ body {
     .container-left,
     .container-right {
         width: 100%;
-        padding: 0;
+        padding: 20px;
     }
 
     .container-right {
@@ -441,9 +441,37 @@ body {
 
 @media (max-width: 768px) {
     .main {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        padding: 15px 5vw;
+    }
+    
+    .main-left {
+        flex: 1;
+        min-width: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .main-left label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        padding-right: 10px;
+        width: 100%;
+        margin-left: 5px;
+    }
+
+    .main-left button {
+        padding: 0 10px;
+    }
+
+    .main-right button {
+        padding: 0 15px;
+        font-size: 14px;
+        white-space: nowrap;
     }
     
     .teacher-profile {
@@ -453,5 +481,39 @@ body {
     
     .teacher-profile button {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-left label {
+        font-size: 13px;
+    }
+    
+    .main-right {
+        width: auto;
+        justify-content: flex-end;
+    }
+
+    .main-right button {
+        padding: 0 10px;
+        font-size: 12px;
+    }
+
+    .main-right img {
+        width: 35px;
+        height: 35px;
+        margin-left: 5px;
+    }
+    
+    .selector ul {
+        gap: 10px;
+        justify-content: space-between;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+    
+    .selector li {
+        font-size: 14px;
     }
 }

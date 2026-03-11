@@ -37,7 +37,7 @@ A premium, responsive e-learning platform frontend meticulously crafted with HTM
 * **Component-Based Styling**: Scoped CSS for each view (e.g., `landing.css`, `course_play.css`) ensures high maintainability.
 * **Efficient UI Logic**: Highly interactive elements powered by Vanilla JS and jQuery for smooth, low-latency performance.
 * **Telegram Bot Integration**: A functional contact form (`studyoncampuss.html`) that messages inquiries directly to admin via Telegram Bot API.
-* **Fully Responsive Views**: 100% responsive implementations on all 8 core views relying heavily on native Grid and Flexbox for optimal mobile & tablet fluidity.
+* **Fully Responsive Views**: 100% responsive implementations on all 8 core views. Features deep mobile optimization for modern small-screen devices (e.g., iPhone 14, 390px viewports), strictly preventing viewport scaling bugs and horizontal overflow while relying heavily on native Grid and flexbox for optimal fluidity.
 
 ---
 

@@ -87,7 +87,7 @@ section {
 .about {
     gap: 40px;
     background-color: var(--background-color);
-    width: 100vw;
+    width: 100%;
     padding: 130px 7.5vw;
 }
 
@@ -158,8 +158,9 @@ section {
 
 /* Course Section */
 .course {
-    width: 100vw;
-    height: 700px;
+    width: 100%;
+    height: auto;
+    min-height: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -427,8 +428,9 @@ section {
 
 /* Course Section */
 .category {
-    width: 100vw;
-    height: 800px;
+    width: 100%;
+    height: auto;
+    min-height: 800px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -478,20 +480,21 @@ section {
 }
 
 @media (max-width: 1200px) {
-    .category-card {
+    .category-container {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (max-width: 880px) {
-    .category-card {
+    .category-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 520px) {
-    .category-card {
-        grid-template-columns: 1fr;
+    .category-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
     }
 }
 
@@ -704,8 +707,9 @@ section {
 
 /* Teacher */
 .teacher {
-    width: 100vw;
-    height: 700px;
+    width: 100%;
+    height: auto;
+    min-height: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -973,7 +977,23 @@ section {
 
     .hero-search {
         width: 100%;
-        max-width: 420px;
+        max-width: 100%;
+    }
+
+    .about {
+        padding: 40px 20px;
+    }
+
+    .course, .teacher, .register {
+        padding: 40px 20px;
+    }
+
+    .platform {
+        padding: 40px 20px;
+    }
+
+    .register-card {
+        padding: 30px 20px;
     }
     
     .teacher-profile-item {

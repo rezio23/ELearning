@@ -37,3 +37,12 @@ $(".forgot-password").on("click", () => {
     text: "This function is not available yet!",
   });
 });
+
+// Hide header actions on scroll for mobile
+$(window).on("scroll", function () {
+  if ($(window).scrollTop() > 50) {
+    $("header").addClass("header-scrolled");
+  } else {
+    $("header").removeClass("header-scrolled");
+  }
+});
