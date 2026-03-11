@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Jakra E-Learning</title>
+    <link rel="icon" type="image/jpg" href="../asset/image/jakraLogo.jpg">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-contact">
+            <div class="contact-left">
+                <div class="header-call">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">+855 12 233 344</a>
+                </div>
+                <div class="header-mail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="#">username@gmail.com</a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <div class="header-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="#">Location</a>
+                </div>
+                <div class="header-location">
+                    <i class="fa-solid fa-robot"></i>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-ul">
+            <div class="logo">
+                <a href="../index.html"><img src="../asset/image/jakraLogo.jpg" alt="logo"></a>
+            </div>
+            <ul>
+                <li><a href="../index.html#about">អំពី</a></li>
+                <li><a href="../index.html">ទំព័រដើម</a></li>
+                <li><a href="allcourse.html">វគ្គសិក្សា</a></li>
+                <li><a href="studyoncampuss.html">ទំនាក់ទំនង</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>ចូលប្រើប្រាស់</h2>
+                <p>សូមបញ្ចូលឈ្មោះអ្នកប្រើប្រាស់ និងពាក្យសម្ងាត់របស់អ្នក</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="username">ឈ្មោះអ្នកប្រើប្រាស់ (Username)</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="username" placeholder="ឧ. student" required>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="password">ពាក្យសម្ងាត់ (Password)</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" placeholder="បញ្ចូលពាក្យសម្ងាត់" required>
+                    </div>
+                </div>
+                <div class="login-actions">
+                    <label class="remember-me">
+                        <input type="checkbox"> ឱ្យខ្ញុំចូលរហូត
+                    </label>
+                    <a href="#" class="forgot-password">ភ្លេចពាក្យសម្ងាត់?</a>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="back-btn" onclick="window.location.href='../index.html'">
+                        <i class="fa-solid fa-arrow-left"></i> ត្រឡប់ក្រោយ
+                    </button>
+                    <button type="submit" class="submit-btn" id="submitLogin">ចូល <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+            <div class="login-footer">
+                <p>មិនទាន់មានគណនីមែនទេ? <a id="register" href="#">ចុះឈ្មោះនៅទីនេះ</a></p>
+            </div>
+        </div>
+    </div>
+
+        <div class="footer-Copyright">
+            © 2026 Jakra. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../jquery.js"></script>
+    <script src="../script/login.js"></script>
+    <script src="../script/main.js"></script>
+</body>
+</html>

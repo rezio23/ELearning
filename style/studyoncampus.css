@@ -75,8 +75,14 @@ body {
     transition: 0.5s ease;
 }
 
-.contact-info label a:hover {
+.contact-info i{
+    transition: 0.5s ease;
+}
+
+.contact-info label a:hover,
+.contact-info label a:hover i {
     color: var(--button-hover-color);
+    transform: translateX(5px);
 }
 
 .contact-info i {

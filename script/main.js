@@ -1,11 +1,3 @@
-$("#loginBtn").on("click", () => {
-  Swal.fire({
-    icon: "warning",
-    title: "Oops...",
-    text: "This function is not available yet!",
-  });
-});
-
 $("#searchBtn").on("click", () => {
   Swal.fire({
     icon: "warning",
@@ -23,6 +15,22 @@ $("#tag-learnMore").on("click", () => {
 });
 
 $("#allCategory").on("click", () => {
+  Swal.fire({
+    icon: "warning",
+    title: "Oops...",
+    text: "This function is not available yet!",
+  });
+});
+
+$("#register").on("click", () => {
+  Swal.fire({
+    icon: "warning",
+    title: "Oops...",
+    text: "This function is not available yet!",
+  });
+});
+
+$(".forgot-password").on("click", () => {
   Swal.fire({
     icon: "warning",
     title: "Oops...",

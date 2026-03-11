@@ -75,6 +75,7 @@ body {
 .main-right img {
     width: 40px;
     border-radius: 50%;
+    object-fit: cover;
     margin-left: 10px;
 }
 

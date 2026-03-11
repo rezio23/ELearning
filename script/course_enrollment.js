@@ -23,6 +23,40 @@ function acledaMethod() {
   $("#acleda").css("color", "white");
 }
 
+// Auto-format card number input: add space every 4 digits
+$("#cardNumber").on("input", function() {
+  let val = $(this).val().replace(/\D/g, ''); // Remove all non-digits
+  if (val.length > 16) {
+    val = val.substr(0, 16); // Limit to 16 digits
+  }
+  let formatted = val.match(/.{1,4}/g);
+  if (formatted) {
+    $(this).val(formatted.join(' '));
+  } else {
+    $(this).val(val);
+  }
+});
+
+// Restrict expiration date to exactly 4 digits and format as MM/YY
+$("#expirationDate").on("input", function() {
+  let val = $(this).val().replace(/\D/g, ''); // Remove all non-digits
+  if (val.length > 4) val = val.substr(0, 4);
+  
+  // Format as MM/YY
+  if (val.length > 2) {
+    $(this).val(val.substr(0, 2) + '/' + val.substr(2));
+  } else {
+    $(this).val(val);
+  }
+});
+
+// Restrict CVC to exactly 3 digits
+$("#securityCode").on("input", function() {
+  let val = $(this).val().replace(/\D/g, ''); // Remove all non-digits
+  if (val.length > 3) val = val.substr(0, 3);
+  $(this).val(val);
+});
+
 $("#submitCardBtn").on("click", function (e) {
   e.preventDefault();
 
@@ -42,7 +76,7 @@ $("#submitCardBtn").on("click", function (e) {
       return;
     }
 
-    if (cardNumber.length !== 16) {
+    if (cardNumber.replace(/\s+/g, '').length !== 16) {
       Swal.fire({
         icon: "error",
         title: "លេខកាតមិនត្រឹមត្រូវ!",
@@ -87,21 +121,21 @@ let courseData = [
     courseName: "កង់ទិចរូបវិទ្យា",
     courseOldPrice: "19.99",
     courseNewPrice: "Free",
-    courseImg: "../asset/author/mainpfp.jpg",
+    courseImg: "../asset/author/main4.jpg",
   },
   {
     courseID: 2,
     courseName: "បញ្ញាសប្បនិម្មិត",
     courseOldPrice: "19.99",
     courseNewPrice: "Free",
-    courseImg: "../asset/author/mainpfp.jpg",
+    courseImg: "../asset/author/main5.jpg",
   },
   {
     courseID: 3,
     courseName: "កាឡាក់ស៊ីមីលគីវ៉េ",
     courseOldPrice: "19.99",
     courseNewPrice: "Free",
-    courseImg: "../asset/author/mainpfp.jpg",
+    courseImg: "../asset/author/main6.jpg",
   },
 ];
 

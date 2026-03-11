@@ -82,6 +82,7 @@ body {
     /* Firefox */
     -ms-overflow-style: none;
     /* IE and Edge */
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar,
@@ -184,11 +185,31 @@ header {
     color: white;
     font-family: var(--default-font);
     font-weight: 400;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
+    display: inline-flex;
+    align-items: center;
 }
 
-.header-contact a:hover {
+.header-contact a:hover{
     color: var(--star-color);
+    transform: scale(1.05); /* Scales the text elegantly */
+}
+
+/* Also animate the icons when hovering over the container! */
+.contact-left div,
+.contact-right div {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Added proper spacing between icon and text */
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-left div:hover i,
+.contact-right div:hover i {
+    color: var(--star-color);
+    transform: translateY(-2px); /* Makes the icon bounce slightly on hover */
+    transition: 0.3s ease;
 }
 
 .contact-left {
@@ -196,7 +217,7 @@ header {
     width: auto;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 30px; /* Increased gap to handle scaling text without overlap */
 }
 
 .contact-right {
@@ -204,7 +225,7 @@ header {
     height: 100%;
     width: auto;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 .header-ul {
@@ -219,9 +240,19 @@ header {
 }
 
 .logo a {
-    font-size: 36px;
-    color: var(--title-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
+}
+
+.logo img {
+    height: 75px; /* Constraining height to fit header nicely */
+    width: auto;
+    border-radius: 8px; /* Optional slight rounding for logo if needed */
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    filter: contrast(1.5) brightness(1.1);
 }
 
 header ul {
@@ -369,7 +400,6 @@ footer {
 
 .footerProfile .logo {
     width: 80px;
-    background-color: var(--button-color);
     color: white;
     height: 80px;
     display: flex;

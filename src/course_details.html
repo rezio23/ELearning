@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jakra E-Learning</title>
-    <link rel="icon" type="image/jpg" href="../asset/image/favicon.jpg">
+    <link rel="icon" type="image/jpg" href="../asset/image/jakraLogo.jpg">
 </head>
 
 <body>
@@ -42,12 +42,12 @@
         </div>
         <div class="header-ul">
             <div class="logo">
-                <a href="../index.html">ចក្រា</a>
+                <a href="../index.html"><img src="../asset/image/jakraLogo.jpg" alt="logo"></a>
             </div>
             <ul>
+                <li><a href="../index.html#about">អំពី</a></li>
                 <li><a href="../index.html">ទំព័រដើម</a></li>
                 <li><a href="allcourse.html">វគ្គសិក្សា</a></li>
-                <li><a href="#">ប្លុក</a></li>
                 <li><a href="studyoncampuss.html">ទំនាក់ទំនង</a></li>
             </ul>
             <div class="header-actions">
@@ -55,13 +55,13 @@
                     <img src="../asset/svg/search.svg" class="icon" alt="search">
                     <input type="text" placeholder="ស្វែងរក...">
                 </div>
-                <button id="loginBtn"><a href="#">ចូល</a></button>
+                <button id="loginBtn"><a href="login.html">ចូល</a></button>
             </div>
         </div>
     </header>
 
     <div class="future">
-        <h1>ចំណេះដឹងគឺមិនគិតថ្លៃ ប៉ុន្តែហុចផលជានិរន្តន៍</h1>
+        <h1>សិក្សាដើម្បីអនាគតដ៏ភ្លឺស្វាងរបស់លោកអ្នក</h1>
         <p>អំពីវគ្គសិក្សា <i class="fa-solid fa-arrow-right"></i> <a href="allcourse.html">មើលវគ្គទាំងអស់</a></p>
     </div>
 
@@ -69,7 +69,7 @@
         <div class="container-left">
             <img src="https://wallpapers.com/images/featured/physics-w4ac9eqvnunc0ocp.jpg" alt="courseImg">
             <div class="course-description">
-                <h2>គណិតវិទ្យា</h2>
+                <h2>គណិតវិទ្យា ធរណីមាត្រ</h2>
                 <p>នៅពេលនិយាយដល់ <strong>គណិតវិទ្យា</strong> មនុស្សភាគច្រើនតែងតែនឹកឃើញដល់តួលេខដ៏ស្មុគស្មាញ
                     និងរូបមន្តដ៏វែងអន្លាយ។ ប៉ុន្តែតាមការពិតទៅ គណិតវិទ្យាគឺជា "ភាសានៃសកលលោក"
                     ដែលត្រូវបានប្រើប្រាស់ដើម្បីពណ៌នា និងស្វែងយល់ពីលំនាំ រចនាសម្ព័ន្ធ
@@ -134,12 +134,12 @@
                 <div class="course-enrolled teacher-description"><label for="enrolled">ចំនួនសិស្សចុះឈ្មោះ<span>៥៤
                             នាក់</span></label></div>
                 <hr>
-                <div class="course-duration teacher-description"><label for="duration">រយៈពេល<span>៣២៣
+                <div class="course-duration teacher-description"><label for="duration">រយៈពេល<span>១៦៦
                             នាទី</span></label></div>
                 <hr>
                 <div class="course-start teacher-description"><label for="start">ថ្ងៃចាប់ផ្ដើម<span>១២ មេសា
                             ២០២៦</span></label></div>
-                <button id="registerBtn"><a href="course_enrollment.html" target="_blank">ចុះឈ្មោះ</a></button>
+                <button id="registerBtn"><a href="course_enrollment.html" >ចុះឈ្មោះ</a></button>
             </div>
 
             <div class="curriculum">
@@ -169,49 +169,6 @@
                                     class="fa-solid fa-circle-play"></i>មើល</a></button></label></div>
                 <button id="viewAllLesson"><a href="course_play.html"><i class="fa-solid fa-circle-play"></i>មើលទាំងអស់</a></button>
             </div>
-
-
-            <!-- <div class="payment">
-                <h3>Select Payment Method</h3>
-                <div class="payment-method">
-                    <button id="visa" onclick="visaMethod()">VISA CARD</button>
-                    <button id="acleda" onclick="acledaMethod()">ACLEDA KHQR</button>
-                </div>
-                <hr>
-                <div class="visaCARD" id="visaCARD">
-                    <label for="cardInformation">Card Information</label>
-                    <div class="visa-payment">
-                        <input type="number" id="cardNumber" name="cardNumber" placeholder="Card Number">
-                        <input type="number" id="expirationDate" name="expirationDate" placeholder="Expiration Date">
-                        <input type="number" id="securityCode" name="securityCode" placeholder="CVC">
-                    </div>
-                    <hr>
-                    <div class="visa-address">
-                        <input type="text" id="fullName" placeholder="Full Name">
-                        <div class="select-country">
-                            <label for="country">Country or region</label>
-                            <select id="country">
-                                <option value="Cambodia">Cambodia</option>
-                                <option value="Thailand">Thailand</option>
-                                <option value="Vietnam">Vietnam</option>
-                                <option value="Laos">Laos</option>
-                                <option value="Myanmar">Myanmar</option>
-                                <option value="Malaysia">Malaysia</option>
-                                <option value="Singapore">Singapore</option>
-                                <option value="Indonesia">Indonesia</option>
-                                <option value="Philippines">Philippines</option>
-                                <option value="Brunei">Brunei</option>
-                            </select>
-                        </div>
-                        <input type="text" id="address" placeholder="Address Line 1">
-                    </div>
-                </div>
-                <div class="acledaKHQR" id="acledaKHQR">
-                    <img src="../asset/image/khqr.jpg" alt="KHQR">
-                </div>
-                <hr>
-                <button id="submitCardBtn">Submit</button>
-            </div> -->
 
             <div class="rating">
                 <h3>Student Feedback</h3>
@@ -267,13 +224,12 @@
         </div>
     </div>
 
-
     <!-- Footer -->
     <footer>
         <div class="footer-Item">
             <div class="footerProfile footerItem">
                 <div class="logo">
-                    <a href="../index.html">ចក្រា</a>
+                    <a href="../index.html"><img src="../asset/image/jakraLogo.jpg" alt="logo"></a>
                 </div>
                 <p>Redefining online education through high-quality, expert-led content that
                     helps you stay ahead in the ever-changing professional landscape.

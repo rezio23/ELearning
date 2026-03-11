@@ -1,7 +1,3 @@
-// Credentials are now loaded from config.js
-// const botToken = config.botToken;
-// const chatId = config.chatId;
-
 $(".contact-form").on("submit", function (e) {
     e.preventDefault();
 
@@ -31,13 +27,14 @@ $(".contact-form").on("submit", function (e) {
         return;
     }
     const telegramMessage = `
-<b>Message from Jakra E-Learning</b>
+<b>New Inquiry from Jakra E-Learning</b>
 
-<b>Name : </b> ${name}
-<b>Email : </b> ${email}
-<b>Subject : </b> ${subject || "មិនមាន"}
+👤 <b>Name:</b> ${name}
+📧 <b>Email:</b> ${email}
+📝 <b>Subject:</b> ${subject || "មិនមាន (None)"}
 
-<b>Message : </b> ${message}
+💬 <b>Message:</b>
+<i>${message}</i>
     `;
 
     fetch(`https://api.telegram.org/bot${config.botToken}/sendMessage`, {

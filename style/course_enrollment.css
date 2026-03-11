@@ -105,6 +105,8 @@ body {
 
 .course-add img {
     width: 40px;
+    height: 40px;
+    object-fit: cover;
     border-radius: 4px;
     float: left;
 }
@@ -155,6 +157,8 @@ body {
 
 .course img {
     width: 60px;
+    height: 60px;
+    object-fit: cover;
     border-radius: 5px;
 }
 

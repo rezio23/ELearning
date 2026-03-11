@@ -4,7 +4,9 @@ let courseData = [
     courseTitle: "គណិតវិទ្យា - ធរណីមាត្រ",
     courseAuthor: "វិឈាន សម្បត្តិ",
     courseImage:
-      "https://wallpapers.com/images/featured/physics-w4ac9eqvnunc0ocp.jpg",
+    "https://wallpapers.com/images/featured/physics-w4ac9eqvnunc0ocp.jpg",
+    courseOldPrice: 19.99,
+    courseNewPrice: 'Free',
     courseAuthorImage: "mainpfp.jpg",
   },
   {
@@ -13,7 +15,9 @@ let courseData = [
     courseAuthor: "អ៊ុក សុបញ្ញា",
     courseImage:
       "https://nsf-gov-resources.nsf.gov/styles/hero_small/s3/2023-04/Andromeda_galaxy_h.jpg.webp?VersionId=1jJ3N_Ix2nIguRWAof8ppMEpu3Bzvx7Q&itok=WSHuusB5",
-    courseAuthorImage: "main2.jpg",
+    courseOldPrice: 99.99,
+    courseNewPrice: 'Free',
+    courseAuthorImage: "main11.jpg",
   },
   {
     courseId: 3,
@@ -21,6 +25,8 @@ let courseData = [
     courseAuthor: "Dr. John",
     courseImage:
       "https://www.drashwanimehta.com/assets/image/blog/tips-from-cardiologist-for-healthy-heart.webp",
+    courseOldPrice: 99.99,
+    courseNewPrice: 'Free',
     courseAuthorImage: "main3.jpg",
   },
   {
@@ -29,6 +35,8 @@ let courseData = [
     courseAuthor: "Ms. Alice",
     courseImage:
       "https://media.licdn.com/dms/image/v2/D4D12AQHGC4-mftneKw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1683647951916?e=2147483647&v=beta&t=sqbOZkehA39pUJx6ifvxVkEaSB73CDP1t-8JY8BeWKI",
+    courseOldPrice: 79.99,
+    courseNewPrice: '$9.99',
     courseAuthorImage: "main4.jpg",
   },
   {
@@ -37,6 +45,8 @@ let courseData = [
     courseAuthor: "សែន ពិសី",
     courseImage:
       "https://png.pngtree.com/thumb_back/fw800/background/20251126/pngtree-stack-of-self-help-and-business-books-with-glasses-pen-on-image_20619670.webp",
+    courseOldPrice: 79.99,
+    courseNewPrice: 'Free',
     courseAuthorImage: "main5.jpg",
   },
   {
@@ -44,6 +54,8 @@ let courseData = [
     courseTitle: "កង់ទិចរូបវិទ្យា",
     courseAuthor: "សាន សុជាតា",
     courseImage: "https://cdn.mos.cms.futurecdn.net/ayTnhRypWyGEgi5zod4RAd.jpg",
+    courseOldPrice: 79.99,
+    courseNewPrice: '$29.99',
     courseAuthorImage: "main6.jpg",
   },
   {
@@ -52,6 +64,8 @@ let courseData = [
     courseAuthor: "មិញ ផាលាភ",
     courseImage:
       "https://m.media-amazon.com/images/S/aplus-media/sota/cdab3996-5d25-4e0c-952b-09d3c4a5635f.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+    courseOldPrice: 79.99,
+    courseNewPrice: 'Free',
     courseAuthorImage: "main7.jpg",
   },
   {
@@ -60,11 +74,21 @@ let courseData = [
     courseAuthor: "ចាន់ ដារ៉ា",
     courseImage:
       "https://4kwallpapers.com/images/wallpapers/geometric-3d-render-3840x2160-12087.jpg",
-    courseAuthorImage: "main12.jpg",
+    courseOldPrice: 79.99,
+    courseNewPrice: 'Free',
+    courseAuthorImage: "main8.jpg",
   },
 ];
 
 courseData.forEach((course) => {
+  let priceColor = "";
+
+  if (course.courseNewPrice === "Free") {
+    priceColor = "var(--price-color)";
+  } else {
+    priceColor = "red";
+  }
+
   let courseItem = `
   <a href="src/course_details.html" class="course-item-card" id="course${course.courseId}">
     <img class="course-thumb" src="${course.courseImage}" alt="${course.courseTitle}">
@@ -76,7 +100,7 @@ courseData.forEach((course) => {
         <img class="profile-thumb" src="asset/author/${course.courseAuthorImage}" alt="author">
         <p>${course.courseAuthor}</p>
       </div>
-      <h2 class="price"><del>$19.99</del>Free</h2>
+      <h2 class="price" style="color: ${priceColor}"><del>$${course.courseOldPrice}</del>${course.courseNewPrice}</h2>
     </div>
     <button>មើល</button>
   </a>
@@ -95,9 +119,6 @@ function backCourse() {
     .text("បន្ទាប់")
     .off("click", backCourse)
     .on("click", nextCourse);
-  // document.getElementById("nextBtn").innerHTML = "បន្ទាប់";
-  // document.getElementById("nextBtn").removeEventListener("click", backCourse);
-  // document.getElementById("nextBtn").addEventListener("click", nextCourse);
 }
 
 function nextCourse() {
@@ -106,12 +127,10 @@ function nextCourse() {
   $("#nextBtn").text("ត្រឡប់").off("click", nextCourse).on("click", backCourse);
 }
 
-// Initial events
 $("#nextBtn").on("click", nextCourse);
 $("#course-number1").on("click", backCourse);
 $("#course-number2").on("click", nextCourse);
 
-// Category Item Data
 let categories = [
   {
     title: "គណិតវិទ្យា",
@@ -139,25 +158,25 @@ let categories = [
   },
   {
     title: "រូបវិទ្យា",
-    info: "ធរណីមាត្រ​,​ តក្កវិទ្យា, ផ្សេងៗ",
+    info: "លំយោល,​ ច្បាប់នៃថាមពល, ផ្សេងៗ",
     titleID: "Physic",
     titleIcon: "fa-solid fa-cloud-bolt",
   },
   {
     title: "រចនារូបភាព",
-    info: "កុំព្យូទ័រ, ស្មាតហ្វូន, ផ្សេងៗ",
+    info: "រួបភាពផ្សព្វផ្សាយ, រួបភាព3D, ផ្សេងៗ",
     titleID: "Design",
     titleIcon: "fa-solid fa-bezier-curve",
   },
   {
     title: "ចំណេះដឹងទូទៅ",
-    info: "សុខាភិបាល, ជំងឺ, ផ្សេងៗ",
+    info: "ការអភិវឌ្ឃន៍គោលគំនិត, វិធីសាស្ត្រនៃការរស់នៅជាបុគ្គលមានវិន័យ, ផ្សេងៗ",
     titleID: "General",
     titleIcon: "fa-solid fa-code-branch",
   },
   {
     title: "ផ្សេងៗ",
-    info: "ទីផ្សារ, ការគ្រប់គ្រង, ផ្សេងៗ",
+    info: "វប្បធម៌, នយោបាយ, ផ្សេងៗ",
     titleID: "Other",
     titleIcon: "fa-solid fa-arrows-turn-to-dots",
   },
@@ -188,31 +207,31 @@ let teachers = [
     teacherId: 2,
     teacherName: "លោកគ្រូ អ៊ុក សុបញ្ញា",
     teacherState: "បរិញ្ញាបត្រ វិទ្យាសាស្ត្រកុំព្យូទ័រ",
-    teacherProfile: "main2.jpg",
+    teacherProfile: "main10.jpg",
   },
   {
     teacherId: 3,
     teacherName: "លោកគ្រូ ចាន់ ដារ៉ា",
     teacherState: "បរិញ្ញាបត្រ គណិតវិទ្យា",
-    teacherProfile: "main3.jpg",
+    teacherProfile: "main8.jpg",
   },
   {
     teacherId: 4,
     teacherName: "Mr. John",
     teacherState: "បរិញ្ញាបត្រ វិជ្ជបណ្ឌិត",
-    teacherProfile: "main11.jpg",
+    teacherProfile: "main3.jpg",
   },
   {
     teacherId: 5,
     teacherName: "Ms. Alice",
     teacherState: "បណ្ឌិត ចិត្តសាស្ត្រ",
-    teacherProfile: "main5.jpg",
+    teacherProfile: "main4.jpg",
   },
   {
     teacherId: 6,
     teacherName: "អ្នកគ្រូ សាន សុជាតា",
     teacherState: "អនុបណ្ឌិត រូបវិទ្យា",
-    teacherProfile: "main9.jpg",
+    teacherProfile: "main6.jpg",
   },
   {
     teacherId: 7,
@@ -224,7 +243,7 @@ let teachers = [
     teacherId: 8,
     teacherName: "អ្នកគ្រូ សែន ពិសី",
     teacherState: "បរិញ្ញាបត្រ ពាណិជ្ជកម្មអន្តរជាតិ",
-    teacherProfile: "main8.jpg",
+    teacherProfile: "main11.jpg",
   },
 ];
 
@@ -266,3 +285,28 @@ function nextTeacher() {
 $("#nextTeacherBtn").on("click", nextTeacher);
 $("#teacher-number1").on("click", backTeacher);
 $("#teacher-number2").on("click", nextTeacher);
+
+// Welcome Popup Logic
+$(document).ready(function() {
+    // Temporarily disabled the sessionStorage check so it pops up EVERY time you refresh (for testing!)
+    // if (!sessionStorage.getItem('welcomeShown')) {
+        // Show the modal after a short delay
+        setTimeout(function() {
+            $('#welcomeModal').css('display', 'flex');
+        }, 800); // 0.8s delay
+    // }
+
+    // Close the popup when clicking the 'X'
+    $('#closeWelcomeBtn').on('click', function() {
+        $('#welcomeModal').fadeOut();
+        sessionStorage.setItem('welcomeShown', 'true');
+    });
+
+    // Close the popup when clicking outside the image content
+    $('#welcomeModal').on('click', function(event) {
+        if ($(event.target).is('#welcomeModal')) {
+            $('#welcomeModal').fadeOut();
+            sessionStorage.setItem('welcomeShown', 'true');
+        }
+    });
+});

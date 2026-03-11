@@ -152,6 +152,7 @@ body {
 .teacher-profile img {
     height: 80px;
     width: 80px;
+    object-fit: cover;
 }
 
 .teacher-name {
